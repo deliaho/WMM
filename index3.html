@@ -1,0 +1,426 @@
+﻿<!DOCTYPE html>
+<html class="gt-ie8 gt-ie9 not-ie">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>DDSC | WMM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="plugins/morris/morris.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <!-- fullCalendar 2.2.5-->
+    <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print">
+
+    <!-- Open Sans font from Google CDN -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css">
+
+    <!-- Pixel Admin's stylesheets -->
+    <link href="assets/stylesheets/pixel-admin.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/widgets.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/rtl.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/themes.min.css" rel="stylesheet" type="text/css">
+    <!-- 自訂 style，後續再彙整 -->
+    <style>
+        .table-striped-column tbody tr th:nth-of-type(odd)
+        {
+            background-color: #f9f9f9;
+        }
+        .fc-head
+        {
+            font-size: 16px;
+        }
+        .fc-center.h2, h2
+        {
+            font-size: 18px;
+        }
+
+        th.fc-day-header.fc-widget-header.fc-sat
+        {
+            font-size: 16px;
+        }
+       .fc-content
+        {
+            font-size: 15px;
+            padding: 2px,2px,2px,2px;
+        }
+        /* force color header of SUN - necessary because it will be garbled up until now */
+    </style>
+</head>
+<!-- top & left 固定 -->
+<body class="theme-default main-navbar-fixed main-menu-fixed fix">
+    <script>var init = [];</script>
+    <!-- Demo script 
+    <script src="assets/demo/demo.js"></script>-->
+    <!-- / Demo script -->
+    <div id="main-wrapper">
+        <div id="main-navbar" class="navbar navbar-inverse" role="navigation">
+            <!-- Main menu toggle -->
+            <button type="button" id="main-menu-toggle"><i class="navbar-icon fa fa-bars icon"></i><span class="hide-menu-text">HIDE MENU</span></button>
+
+            <div class="navbar-inner" style="height: 46px;">
+                <!-- Main navbar header -->
+                <div class="navbar-header">
+                    <!-- Logo (height: 46px)-->
+                    <a href="location.href='index.html">
+                        <div class="navbar-brand no-padding-hr" style="margin-bottom: -2px; padding-top: 2px;">
+                            <img alt="logo" src="dist/img/logo_kgi.png" class="image img-responsive">
+                        </div>
+                    </a>
+                    <!-- Product name  (height: 46px)-->
+                    <div class="navbar-brand" style="margin-bottom: -5px;">
+                        <img alt="WMM" src="dist/img/header_title.png" class="image img-responsive">
+                    </div>
+                    <!-- Main navbar toggle -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
+                </div>
+                <!-- / .navbar-header -->
+                <div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
+                    <div>
+                        <!-- / .navbar-nav  -->
+                        <!--
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">理專首頁</a>
+						</li>
+						<li>
+							<a href="#">主管首頁</a>
+						</li>
+                        
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">First item</a></li>
+								<li><a href="#">Second item</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Third item</a></li>
+							</ul>
+						</li>
+                        </ul>
+                      -->
+                        <div class="right clearfix">
+                            <ul class="nav navbar-nav pull-right right-navbar-nav">
+                                <!-- 重要訊息 -->
+                                <li class="nav-icon-btn nav-icon-btn-danger dropdown">
+                                    <a href="#notifications" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span class="label">5</span>
+                                        <i class="nav-icon fa fa-bell-o"></i>
+                                        <span class="small-screen-text">訊息</span>
+                                    </a>
+                                    <!-- NOTIFICATIONS -->
+                                    <!-- Javascript -->
+                                    <script>
+                                        init.push(function () {
+                                            $('#main-navbar-notifications').slimScroll({ height: 250 });
+                                        });
+                                    </script>
+                                    <!-- / Javascript -->
+                                    <div class="dropdown-menu widget-notifications no-padding" style="width: 300px">
+                                        <div class="notifications-list" id="main-navbar-notifications">
+                                            <div class="notification">
+                                                <div class="notification-title text-green">系統上線</div>
+                                                <div class="notification-description"><strong>財富管理系統上線</strong></div>
+                                                <div class="notification-icon glyphicon glyphicon-info-sign text-green"></div>
+                                            </div>
+                                            <!-- / .notification -->
+                                            <div class="notification">
+                                                <div class="notification-title text-red">暫停服務</div>
+                                                <div class="notification-description">網路銀行維護</div>
+                                                <div class="notification-icon glyphicon glyphicon-exclamation-sign text-red"></div>
+                                            </div>
+                                            <!-- / .notification -->
+
+                                            <div class="notification">
+                                                <div class="notification-title text-green">系統上線</div>
+                                                <div class="notification-description">網路銀行/行動銀行新增功能上線</div>
+                                                <div class="notification-icon glyphicon glyphicon-info-sign text-green"></div>
+                                            </div>
+                                            <!-- / .notification -->
+
+                                            <div class="notification">
+                                                <div class="notification-title text-warning">修改密碼</div>
+                                                <div class="notification-description">請於 2015/12/31 前修改密碼</div>
+                                                <div class="notification-icon glyphicon glyphicon-warning-sign text-warning"></div>
+                                            </div>
+                                            <!-- / .notification -->
+
+                                            <div class="notification">
+                                                <div class="notification-title text-green">新增功能上線</div>
+                                                <div class="notification-description"><strong>行動銀行新增功能上線</strong></div>
+                                                <div class="notification-icon glyphicon glyphicon-info-sign text-green"></div>
+                                            </div>
+                                            <!-- / .notification -->
+                                            <div class="notification">
+                                                <div class="notification-title text-green">新增功能上線</div>
+                                                <div class="notification-description"><strong>網路銀行新增功能上線</strong></div>
+                                                <div class="notification-icon glyphicon glyphicon-info-sign text-green"></div>
+                                            </div>
+                                            <!-- / .notification -->
+
+                                        </div>
+                                        <!-- / .notifications-list -->
+                                        <a href="#" class="notifications-link">更多訊息</a>
+                                    </div>
+                                    <!-- / .dropdown-menu -->
+                                </li>
+                                <li class="nav-icon-btn nav-icon-btn-success dropdown">
+                                    <a href="#messages" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span class="label">10</span>
+                                        <i class="nav-icon fa fa-flag-o"></i>
+                                        <span class="small-screen-text">待覆核資料</span>
+                                    </a>
+                                    <!-- MESSAGES -->
+                                    <!-- Javascript -->
+                                    <script>
+                                        init.push(function () {
+                                            $('#main-navbar-messages').slimScroll({ height: 250 });
+                                        });
+                                    </script>
+                                    <!-- / Javascript -->
+                                    <div class="dropdown-menu widget-messages-alt no-padding" style="width: 300px;">
+                                        <div class="messages-list" id="main-navbar-messages">
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">大額資產警示門檻設定覆核</a>
+                                            </div>
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">客戶分級級距資料覆核 - 高級人員.</a>
+                                            </div>
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">客戶分級級距資料覆核 - 特等尊貴</a>
+                                            </div>
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">客戶分級級距資料覆核 - 一般</a>
+                                            </div>
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">大額資產警示門檻設定覆核</a>
+                                            </div>
+                                        </div>
+                                        <!-- / .messages-list -->
+                                        <a href="#" class="messages-link">更多資料</a>
+                                    </div>
+                                    <!-- / .dropdown-menu -->
+                                </li>
+                                <!-- /3. $END_NAVBAR_ICON_BUTTONS -->
+                                <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="nav-icon fa fa-user" style="color: #eb5405;"></i>
+                                        <span style="padding-right: 10px;">888 營業部</span>
+                                        <span>888888 錢大軍</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" " class="dropdown-toggle user-menu" data-toggle="dropdown">
+                                        <i class="nav-icon glyphicon glyphicon-log-out" style="color: #3cba54;"></i>
+                                        <span class="small-screen-text">登出</span>
+                                        <span id="clock" class="label bg-red"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- / .navbar-nav -->
+                        </div>
+                        <!-- / .right -->
+                    </div>
+                </div>
+                <!-- / #main-navbar-collapse -->
+            </div>
+            <!-- / .navbar-inner -->
+        </div>
+        <!-- / #main-navbar -->
+        <!-- /2. $END_MAIN_NAVIGATION -->
+
+
+        <!-- 4. $MAIN_MENU =================================================================================
+
+		Main menu
+		
+		Notes:
+		* to make the menu item active, add a class 'active' to the <li>
+		  example: <li class="active">...</li>
+		* multilevel submenu example:
+			<li class="mm-dropdown">
+			  <a href="#"><span class="mm-text">Submenu item text 1</span></a>
+			  <ul>
+				<li>...</li>
+				<li class="mm-dropdown">
+				  <a href="#"><span class="mm-text">Submenu item text 2</span></a>
+				  <ul>
+					<li>...</li>
+					...
+				  </ul>
+				</li>
+				...
+			  </ul>
+			</li>
+-->
+        <div id="main-menu" role="navigation">
+            <div id="main-menu-inner">
+                <ul class="navigation">
+                    <li>
+                        <a href="index.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">理財專員</span></a>
+                    </li>
+                    <li>
+                        <a href="stat-panels.html"><i class="menu-icon fa fa-tasks"></i><span class="mm-text">首頁</span></a>
+                    </li>
+                    <li class="mm-dropdown">
+                        <a href="#"><i class="menu-icon fa fa-th"></i><span class="mm-text">客戶全覽</span></a>
+                        <ul>
+                            <li>
+                                <a tabindex="-1" href="layouts-grid.html"><span class="mm-text">Grid</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="layouts-main-menu.html"><i class="menu-icon fa fa-th-list"></i><span class="mm-text">Main menu</span><span class="label label-warning">Updated</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="stat-panels.html"><i class="menu-icon fa fa-tasks"></i><span class="mm-text">客戶資產</span></a>
+                    </li>
+                    <li>
+                        <a href="widgets.html"><i class="menu-icon fa fa-flask"></i><span class="mm-text">投資建議書</span></a>
+                    </li>
+                    <li class="mm-dropdown">
+                        <a href="#"><i class="menu-icon fa fa-check-square"></i><span class="mm-text">交易紀錄查詢</span></a>
+                        <ul>
+                            <li>
+                                <a tabindex="-1" href="forms-layouts.html"><span class="mm-text">基金、債券、ETF</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="forms-general.html"><span class="mm-text">黃金存摺</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="forms-advanced.html"><span class="mm-text">組合式存款</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="complete-ui.html"><i class="menu-icon fa fa-briefcase"></i><span class="mm-text">訪談記錄查詢</span></a>
+                    </li>
+                </ul>
+                <!-- / .navigation -->
+            </div>
+            <!-- / #main-menu-inner -->
+        </div>
+        <!-- / #main-menu -->
+        <div id="content-wrapper">
+            <div class="page-header no-padding " style="color: white; margin-bottom: -5px;">
+                <div class="row" style="background-color: #EB5405;">
+                    <!-- Page header, center on small screens -->
+                    <!--  <h1 class="col-xs-12 col-sm-4 text-center text-left-sm"><i class="fa fa-dashboard page-header-icon"></i>&nbsp;&nbsp;Dashboard</h1> -->
+                    <div class="col-md-9 col-sm-9">
+                        <form class="margin" role="search">
+                            <div class="btn-group">
+                                <select class="form-control select2" style="width: 120px;">
+                                    <option selected="selected">身分證號</option>
+                                    <option>姓名(模糊)</option>
+                                    <option>姓名(精準)</option>
+                                    <option>產品名稱</option>
+                                </select>
+                            </div>
+                            <div class="btn-group">
+                                <input type="text" class="form-control" style="width: 150px;">
+                            </div>
+                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="col-md-3  col-sm-3">
+                        <button type="button" class="btn btn-primary btn-lg margin pull-right"><i class="fa fa-cart-arrow-down margin-r-5"></i>快速下單</button>
+                    </div>
+                </div>
+                <div class="row margin text-center">
+                    <a href="index.html" class="btn btn-app btn-flat  btn-primary btn-lg">
+                        <i class="fa fa-home"></i>首頁
+                        </a>
+                    <a href="index2.html" class="btn btn-app btn-flat  btn-primary btn-lg">
+                        <i class="fa fa-dashboard"></i>儀表板
+                        </a>
+                    <a href="index3.html" class="btn btn-app btn-flat btn-primary btn-lg active">
+                        <i class="fa fa-line-chart"></i>金融行情
+                        </a>
+                </div>
+            </div>
+            <!-- / .page-header -->
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div style="position: relative; padding-bottom: 40%; overflow: hidden; height: 1600px;">
+                        <div style="position: absolute; align-content: center; top: 0; left: 50px; width: 100%; height: 100%;">
+                            <iframe src="http://esunbankfintest.moneydj.com/w4/index.djhtm?aspid=esun" width="1100" height="1700"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- / #content-wrapper -->
+        <div id="main-menu-bg"></div>
+    </div>
+    <!-- / #main-wrapper -->
+    <!-- Get jQuery from Google CDN -->
+    <!--[if !IE]> -->
+    <script type="text/javascript"> window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">' + "<" + "/script>"); </script>
+    <!-- <![endif]-->
+    <!--[if lte IE 9]>
+	<script type="text/javascript"> window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">'+"<"+"/script>"); </script>
+    <![endif]-->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jQueryUI/jquery-ui.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="plugins/fastclick/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js"></script>
+    <!-- AdminLTE for demo purposes 
+    <script src="dist/js/demo.js"></script>-->
+    <!-- Pixel Admin's javascripts -->
+    <script src="assets/javascripts/pixel-admin.min.js"></script>
+    <script type="text/javascript">
+        init.push(function () {
+            // Javascript code here
+        })
+        window.PixelAdmin.start(init);
+    </script>
+    <!-- jquery countdown -->
+    <script src="plugins/jQuery/jquery.countdown-2.1.0/jquery.countdown.min.js"></script>
+    <script type="text/javascript">
+        function gettimeFromNow() {
+            return new Date(new Date().valueOf() + 30 * 60 * 1000);
+        }
+        var $clock = $('#clock');
+        $clock.countdown(gettimeFromNow(), function (event) {
+            $(this).html(event.strftime('%M:%S'));
+        });
+        $('#btn-reset').click(function () {
+            $clock.countdown(gettimeFromNow());
+        });
+    </script>
+</body>
+</html>

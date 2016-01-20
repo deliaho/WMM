@@ -1,0 +1,968 @@
+﻿<!DOCTYPE html>
+<html class="gt-ie8 gt-ie9 not-ie">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>DDSC | WMM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="plugins/morris/morris.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <!-- fullCalendar 2.2.5-->
+    <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print">
+
+    <!-- Open Sans font from Google CDN -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css">
+
+    <!-- Pixel Admin's stylesheets -->
+    <link href="assets/stylesheets/pixel-admin.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/widgets.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/rtl.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/themes.min.css" rel="stylesheet" type="text/css">
+    <!-- 自訂 style，後續再彙整 -->
+    <style>
+        .table-striped-column tbody tr th:nth-of-type(odd)
+        {
+            background-color: #f9f9f9;
+        }
+        .fc-head
+        {
+            font-size: 16px;
+        }
+        .fc-center.h2, h2
+        {
+            font-size: 18px;
+        }
+
+        th.fc-day-header.fc-widget-header.fc-sat
+        {
+            font-size: 16px;
+        }
+       .fc-content
+        {
+            font-size: 15px;
+            padding: 2px,2px,2px,2px;
+        }
+        /* force color header of SUN - necessary because it will be garbled up until now */
+    </style>
+</head>
+<!-- top & left 固定 -->
+<body class="theme-default main-navbar-fixed main-menu-fixed fix">
+    <script>var init = [];</script>
+    <!-- Demo script 
+    <script src="assets/demo/demo.js"></script>-->
+    <!-- / Demo script -->
+    <div id="main-wrapper">
+        <div id="main-navbar" class="navbar navbar-inverse" role="navigation">
+            <!-- Main menu toggle -->
+            <button type="button" id="main-menu-toggle"><i class="navbar-icon fa fa-bars icon"></i><span class="hide-menu-text">HIDE MENU</span></button>
+
+            <div class="navbar-inner" style="height: 46px;">
+                <!-- Main navbar header -->
+                <div class="navbar-header">
+                    <!-- Logo (height: 46px)-->
+                    <a href="location.href='index.html">
+                        <div class="navbar-brand no-padding-hr" style="margin-bottom: -2px; padding-top: 2px;">
+                            <img alt="logo" src="dist/img/logo_kgi.png" class="image img-responsive">
+                        </div>
+                    </a>
+                    <!-- Product name  (height: 46px)-->
+                    <div class="navbar-brand" style="margin-bottom: -5px;">
+                        <img alt="WMM" src="dist/img/header_title.png" class="image img-responsive">
+                    </div>
+                    <!-- Main navbar toggle -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
+                </div>
+                <!-- / .navbar-header -->
+                <div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
+                    <div>
+                        <!-- / .navbar-nav  -->
+                        <!--
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">理專首頁</a>
+						</li>
+						<li>
+							<a href="#">主管首頁</a>
+						</li>
+                        
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">First item</a></li>
+								<li><a href="#">Second item</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Third item</a></li>
+							</ul>
+						</li>
+                        </ul>
+                      -->
+                        <div class="right clearfix">
+                            <ul class="nav navbar-nav pull-right right-navbar-nav">
+                                <!-- 重要訊息 -->
+                                <li class="nav-icon-btn nav-icon-btn-danger dropdown">
+                                    <a href="#notifications" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span class="label">5</span>
+                                        <i class="nav-icon fa fa-bell-o"></i>
+                                        <span class="small-screen-text">訊息</span>
+                                    </a>
+                                    <!-- NOTIFICATIONS -->
+                                    <!-- Javascript -->
+                                    <script>
+                                        init.push(function () {
+                                            $('#main-navbar-notifications').slimScroll({ height: 250 });
+                                        });
+                                    </script>
+                                    <!-- / Javascript -->
+                                    <div class="dropdown-menu widget-notifications no-padding" style="width: 300px">
+                                        <div class="notifications-list" id="main-navbar-notifications">
+                                            <div class="notification">
+                                                <div class="notification-title text-green">系統上線</div>
+                                                <div class="notification-description"><strong>財富管理系統上線</strong></div>
+                                                <div class="notification-icon glyphicon glyphicon-info-sign text-green"></div>
+                                            </div>
+                                            <!-- / .notification -->
+                                            <div class="notification">
+                                                <div class="notification-title text-red">暫停服務</div>
+                                                <div class="notification-description">網路銀行維護</div>
+                                                <div class="notification-icon glyphicon glyphicon-exclamation-sign text-red"></div>
+                                            </div>
+                                            <!-- / .notification -->
+
+                                            <div class="notification">
+                                                <div class="notification-title text-green">系統上線</div>
+                                                <div class="notification-description">網路銀行/行動銀行新增功能上線</div>
+                                                <div class="notification-icon glyphicon glyphicon-info-sign text-green"></div>
+                                            </div>
+                                            <!-- / .notification -->
+
+                                            <div class="notification">
+                                                <div class="notification-title text-warning">修改密碼</div>
+                                                <div class="notification-description">請於 2015/12/31 前修改密碼</div>
+                                                <div class="notification-icon glyphicon glyphicon-warning-sign text-warning"></div>
+                                            </div>
+                                            <!-- / .notification -->
+
+                                            <div class="notification">
+                                                <div class="notification-title text-green">新增功能上線</div>
+                                                <div class="notification-description"><strong>行動銀行新增功能上線</strong></div>
+                                                <div class="notification-icon glyphicon glyphicon-info-sign text-green"></div>
+                                            </div>
+                                            <!-- / .notification -->
+                                            <div class="notification">
+                                                <div class="notification-title text-green">新增功能上線</div>
+                                                <div class="notification-description"><strong>網路銀行新增功能上線</strong></div>
+                                                <div class="notification-icon glyphicon glyphicon-info-sign text-green"></div>
+                                            </div>
+                                            <!-- / .notification -->
+
+                                        </div>
+                                        <!-- / .notifications-list -->
+                                        <a href="#" class="notifications-link">更多訊息</a>
+                                    </div>
+                                    <!-- / .dropdown-menu -->
+                                </li>
+                                <li class="nav-icon-btn nav-icon-btn-success dropdown">
+                                    <a href="#messages" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span class="label">10</span>
+                                        <i class="nav-icon fa fa-flag-o"></i>
+                                        <span class="small-screen-text">待覆核資料</span>
+                                    </a>
+                                    <!-- MESSAGES -->
+                                    <!-- Javascript -->
+                                    <script>
+                                        init.push(function () {
+                                            $('#main-navbar-messages').slimScroll({ height: 250 });
+                                        });
+                                    </script>
+                                    <!-- / Javascript -->
+                                    <div class="dropdown-menu widget-messages-alt no-padding" style="width: 300px;">
+                                        <div class="messages-list" id="main-navbar-messages">
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">大額資產警示門檻設定覆核</a>
+                                            </div>
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">客戶分級級距資料覆核 - 高級人員.</a>
+                                            </div>
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">客戶分級級距資料覆核 - 特等尊貴</a>
+                                            </div>
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">客戶分級級距資料覆核 - 一般</a>
+                                            </div>
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">大額資產警示門檻設定覆核</a>
+                                            </div>
+                                        </div>
+                                        <!-- / .messages-list -->
+                                        <a href="#" class="messages-link">更多資料</a>
+                                    </div>
+                                    <!-- / .dropdown-menu -->
+                                </li>
+                                <!-- /3. $END_NAVBAR_ICON_BUTTONS -->
+                                <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="nav-icon fa fa-user" style="color: #eb5405;"></i>
+                                        <span style="padding-right: 10px;">888 營業部</span>
+                                        <span>888888 錢大軍</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" " class="dropdown-toggle user-menu" data-toggle="dropdown">
+                                        <i class="nav-icon glyphicon glyphicon-log-out" style="color: #3cba54;"></i>
+                                        <span class="small-screen-text">登出</span>
+                                        <span id="clock" class="label bg-red"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- / .navbar-nav -->
+                        </div>
+                        <!-- / .right -->
+                    </div>
+                </div>
+                <!-- / #main-navbar-collapse -->
+            </div>
+            <!-- / .navbar-inner -->
+        </div>
+        <div id="main-menu" role="navigation">
+            <div id="main-menu-inner">
+                <ul class="navigation">
+                    <li>
+                        <a href="index.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">理財專員</span></a>
+                    </li>
+                    <li>
+                        <a href="stat-panels.html"><i class="menu-icon fa fa-tasks"></i><span class="mm-text">首頁</span></a>
+                    </li>
+                    <li class="mm-dropdown">
+                        <a href="#"><i class="menu-icon fa fa-th"></i><span class="mm-text">客戶全覽</span></a>
+                        <ul>
+                            <li>
+                                <a tabindex="-1" href="layouts-grid.html"><span class="mm-text">Grid</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="layouts-main-menu.html"><i class="menu-icon fa fa-th-list"></i><span class="mm-text">Main menu</span><span class="label label-warning">Updated</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="stat-panels.html"><i class="menu-icon fa fa-tasks"></i><span class="mm-text">客戶資產</span></a>
+                    </li>
+                    <li>
+                        <a href="widgets.html"><i class="menu-icon fa fa-flask"></i><span class="mm-text">投資建議書</span></a>
+                    </li>
+                    <li class="mm-dropdown">
+                        <a href="#"><i class="menu-icon fa fa-check-square"></i><span class="mm-text">交易紀錄查詢</span></a>
+                        <ul>
+                            <li>
+                                <a tabindex="-1" href="forms-layouts.html"><span class="mm-text">基金、債券、ETF</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="forms-general.html"><span class="mm-text">黃金存摺</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="forms-advanced.html"><span class="mm-text">組合式存款</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="complete-ui.html"><i class="menu-icon fa fa-briefcase"></i><span class="mm-text">訪談記錄查詢</span></a>
+                    </li>
+                </ul>
+                <!-- / .navigation -->
+            </div>
+            <!-- / #main-menu-inner -->
+        </div>
+        <!-- / #main-menu -->
+        <div id="content-wrapper">
+            <div class="page-header no-padding " style="color: white; margin-bottom: -5px;">
+                <div class="row" style="background-color: #EB5405;">
+                    <!-- Page header, center on small screens -->
+                    <!--  <h1 class="col-xs-12 col-sm-4 text-center text-left-sm"><i class="fa fa-dashboard page-header-icon"></i>&nbsp;&nbsp;Dashboard</h1> -->
+                    <div class="col-md-9 col-sm-9">
+                        <form class="margin" role="search">
+                            <div class="btn-group">
+                                <select class="form-control select2" style="width: 120px;">
+                                    <option selected="selected">身分證號</option>
+                                    <option>姓名(模糊)</option>
+                                    <option>姓名(精準)</option>
+                                    <option>產品名稱</option>
+                                </select>
+                            </div>
+                            <div class="btn-group">
+                                <input type="text" class="form-control" style="width: 150px;">
+                            </div>
+                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                    <div class="col-md-3  col-sm-3">
+                        <button type="button" class="btn btn-primary btn-lg margin pull-right"><i class="fa fa-cart-arrow-down margin-r-5"></i>快速下單</button>
+                    </div>
+                </div>
+                <div class="row margin text-center">
+                    <a href="index.html" class="btn btn-app btn-flat  btn-primary btn-lg ">
+                        <i class="fa fa-home"></i>首頁
+                        </a>
+                    <a href="index2.html" class="btn btn-app btn-flat  btn-primary btn-lg  active">
+                        <i class="fa fa-dashboard"></i>儀表板
+                        </a>
+                    <a href="index3.html" class="btn btn-app btn-flat btn-primary btn-lg">
+                        <i class="fa fa-line-chart"></i>金融行情
+                        </a>
+                </div>
+            </div>
+            <!-- / .page-header -->
+            <!-- Main content -->
+            <section class="content">
+                <div class="row ">
+                    <!-- 顧客最新交易距今天數 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="box  box-primary box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">
+                                    <i class="icon fa fa-pie-chart margin-r-5"></i>顧客交易數</h3>
+                                    <button class="btn btn-default pull-right">明細</button>
+                            </div>
+                            <div class="box-body">
+                                <div class="box-body chart-responsive">
+                                    <div id="pie1" class="chart"></div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                    <!-- 顧客最新交易距今天數 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="box  box-primary box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">
+                                    <i class="icon fa fa-pie-chart margin-r-5"></i>顧客訪談數</h3>
+                                    <button class="btn btn-default pull-right">明細</button>
+                            </div>
+                            <div class="box-body">
+                                <div class="box-body chart-responsive">
+                                    <div id="pie2" class="chart"></div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                    <!-- 前30大客戶貢獻度佔比-->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="box  box-primary box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">
+                                    <i class="icon fa  fa-line-chart margin-r-5"></i>前30大客戶貢獻度</h3>
+                                    <button class="btn btn-default pull-right">明細</button>
+                            </div>
+                            <div class="box-body">
+                                <div class="box-body chart-responsive">
+                                    <div id="chart3" class="chart"></div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row ">
+                    <!-- 前50大顧客資產時序變化-->
+                    <div class="col-md-12 col-lg-12">
+                        <div class="box box-primary box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title"><i class="fa fa-group margin-r-5"></i>前50大顧客資產時序變化</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr class=" bg-gray-light">
+                                            <th class="no-padding-hr text text-center">資產項目平均餘額</>
+                                            <th class="no-padding-hr text text-center">台幣活存</th>
+                                            <th class="no-padding-hr text text-center">外幣活存</th>
+                                            <th class="no-padding-hr text text-center">台幣定存</th>
+                                            <th class="no-padding-hr text text-center">外幣定存</th>
+                                            <th class="no-padding-hr text text-center">基金餘額</th>
+                                            <th class="no-padding-hr text text-center">ETF餘額</th>
+                                            <th class="no-padding-hr text text-center">債券餘額</th>
+                                            <th class="no-padding-hr text text-center">連動債餘額</th>
+                                            <th class="no-padding-hr text text-center">DCI</th>
+                                            <th class="no-padding-hr text text-center">RP金額</th>
+                                            <th class="no-padding-hr text text-center">保險</th>
+                                            <th class="no-padding-hr text text-center">黃金存摺</th>
+                                            <th class="no-padding-hr text text-center">理財總AUM</th>
+                                            <th class="no-padding-hr text text-center">總AUM餘額</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">目前</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">1個月前</td>
+                                            <td class="text-right">10.94</td>
+                                            <td class="text-right">3.18</td>
+                                            <td class="text-right">18.61</td>
+                                            <td class="text-right">7.59</td>
+                                            <td class="text-right">0.55</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.05</td>
+                                            <td class="text-right">0.05</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.04</td>
+                                            <td class="text-right">0.65</td>
+                                            <td class="text-right">40.98</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">3個月前</td>
+                                            <td class="text-right">10.94</td>
+                                            <td class="text-right">3.18</td>
+                                            <td class="text-right">18.61</td>
+                                            <td class="text-right">7.59</td>
+                                            <td class="text-right">0.55</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.05</td>
+                                            <td class="text-right">0.05</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.04</td>
+                                            <td class="text-right">0.65</td>
+                                            <td class="text-right">40.98</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">6個月前</td>
+                                            <td class="text-right">10.94</td>
+                                            <td class="text-right">3.18</td>
+                                            <td class="text-right">18.61</td>
+                                            <td class="text-right">7.59</td>
+                                            <td class="text-right">0.55</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.05</td>
+                                            <td class="text-right">0.05</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.04</td>
+                                            <td class="text-right">0.65</td>
+                                            <td class="text-right">40.98</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">12個月前</td>
+                                            <td class="text-right">10.94</td>
+                                            <td class="text-right">3.18</td>
+                                            <td class="text-right">18.61</td>
+                                            <td class="text-right">7.59</td>
+                                            <td class="text-right">0.55</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.05</td>
+                                            <td class="text-right">0.05</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.00</td>
+                                            <td class="text-right">0.04</td>
+                                            <td class="text-right">0.65</td>
+                                            <td class="text-right">40.98</td>
+                                        </tr>
+                                    </tbody>                                   
+                                </table>
+                                <span class="pull-right">單位：百萬元</span>
+                            </div>
+                            <!-- <div class="box-footer">
+                                1. 理財戶：有理財庫存戶(理財AUM大於0)<br />
+                                2. 流失警示戶：曾往來過理財但已逾六個月未往來理財<br />
+                                3. 流失戶：曾往過理財但已逾一年未往來理財</div> -->
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <div class="row ">
+                    <!-- 顧客投資資產報酬率－依顧客-->
+                    <div class="col-md-6 col-lg-6">
+                        <div class="box box-primary box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title"><i class="fa fa-group margin-r-5"></i>顧客投資資產報酬率－依顧客</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr class=" bg-gray-light">
+                                            <th class="no-padding-hr text text-center">報酬率級距</>
+                                            <th class="no-padding-hr text text-center">顧客人數</th>
+                                            <th class="no-padding-hr text text-center">投資AUM(本金)</th>
+                                            <th class="no-padding-hr text text-center">投資淨額</th>
+                                            <th class="no-padding-hr text text-center">損益金額</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">15%以上</td>
+                                            <td class="text-right">1</td>
+                                            <td class="text-right">135,872,244</td>
+                                            <td class="text-right">114,916,999,385</td>
+                                            <td class="text-right">114,784,093,672</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">10%~15%</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">5%~10%</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">0%~5%</td>
+                                            <td class="text-right">2</td>
+                                            <td class="text-right">39,764,765</td>
+                                            <td class="text-right">397,465,327</td>
+                                            <td class="text-right">357,544,103</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">0%~-5%</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">-10%~-5%</td>
+                                            <td class="text-right">1</td>
+                                            <td class="text-right">53,588,738</td>
+                                            <td class="text-right">57,847,221</td>
+                                            <td class="text-right">3,565,494</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">-15%~-10%</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">-15%以上</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                    </tbody>                                   
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col -->
+                    <!--顧客投資資產報酬率－依信託編號-->
+                    <div class="col-md-6 col-lg-6">
+                        <div class="box box-primary box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title"><i class="fa fa-group margin-r-5"></i>顧客投資資產報酬率－依信託編號</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr class=" bg-gray-light">
+                                            <th class="no-padding-hr text text-center">報酬率級距</>
+                                            <th class="no-padding-hr text text-center">憑證筆數</th>
+                                            <th class="no-padding-hr text text-center">投資AUM(本金)</th>
+                                            <th class="no-padding-hr text text-center">投資淨額</th>
+                                            <th class="no-padding-hr text text-center">損益金額</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">15%以上</td>
+                                            <td class="text-right">52</td>
+                                            <td class="text-right">57,372,880</td>
+                                            <td class="text-right">114,916,999,385</td>
+                                            <td class="text-right">114,784,093,672</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">10%~15%</td>
+                                            <td class="text-right">1</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">5%~10%</td>
+                                            <td class="text-right">8</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">0%~5%</td>
+                                            <td class="text-right">687</td>
+                                            <td class="text-right">23,261,202</td>
+                                            <td class="text-right">31,905,344</td>
+                                            <td class="text-right">8,633,539</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">0%~-5%</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">-10%~-5%</td>
+                                            <td class="text-right">9</td>
+                                            <td class="text-right">564,560</td>
+                                            <td class="text-right">548,673</td>
+                                            <td class="text-right">-45,343</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">-15%~-10%</td>
+                                            <td class="text-right">2</td>
+                                            <td class="text-right">1,353,600</td>
+                                            <td class="text-right">1,227,598</td>
+                                            <td class="text-right">-156,082</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">-15%以上</td>
+                                            <td class="text-right">169</td>
+                                            <td class="text-right">116,197,187</td>
+                                            <td class="text-right">16,254,264</td>
+                                            <td class="text-right">-100,657,322</td>
+                                        </tr>
+                                    </tbody>                                   
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <div class="row ">
+                </div>
+            </section>
+        </div>
+        <!-- / #content-wrapper -->
+        <div id="main-menu-bg"></div>
+    </div>
+    <!-- / #main-wrapper -->
+    <!-- Get jQuery from Google CDN -->
+    <!--[if !IE]> -->
+    <script type="text/javascript"> window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js">' + "<" + "/script>"); </script>
+    <!-- <![endif]-->
+    <!--[if lte IE 9]>
+	<script type="text/javascript"> window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">'+"<"+"/script>"); </script>
+    <![endif]-->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jQueryUI/jquery-ui.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="plugins/fastclick/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js"></script>
+    <!-- AdminLTE for demo purposes 
+    <script src="dist/js/demo.js"></script>-->
+    <!-- fullCalendar 2.2.5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <script src="plugins/fullcalendar/fullcalendar.min.js"></script>
+    <!-- Pixel Admin's javascripts -->
+    <script src="assets/javascripts/pixel-admin.min.js"></script>
+    <script type="text/javascript">
+        init.push(function () {
+            // Javascript code here
+        })
+        window.PixelAdmin.start(init);
+    </script>
+    <!-- jquery countdown -->
+    <script src="plugins/jQuery/jquery.countdown-2.1.0/jquery.countdown.min.js"></script>
+    <script type="text/javascript">
+        function gettimeFromNow() {
+            return new Date(new Date().valueOf() + 30 * 60 * 1000);
+        }
+        var $clock = $('#clock');
+        $clock.countdown(gettimeFromNow(), function (event) {
+            $(this).html(event.strftime('%M:%S'));
+        });
+        $('#btn-reset').click(function () {
+            $clock.countdown(gettimeFromNow());
+        });
+    </script>
+
+    <!-- fusioncharts -->
+    <script type="text/javascript" src="fusioncharts/js/fusioncharts.js"></script>
+    <script type="text/javascript" src="fusioncharts/js/themes/fusioncharts.theme.fint.js"></script>
+    <!-- 顧客最新交易距今天數 -->
+    <script type="text/javascript">
+        FusionCharts.ready(function () {
+            var visitChart = new FusionCharts({
+                type: 'pie2d',
+                renderAt: 'pie1',
+                width: '100%',
+                height: '300',
+                dataFormat: 'json',
+                dataSource: {
+                    "chart": {
+                        //"caption": "Expenditures Incurred in Publishing a Book",
+                        "bgcolor": "FFFFFF",
+                        "showvalues": "1",
+                        "showpercentvalues": "1",
+                        "showLabels": "0",
+                        "showborder": "0",
+                        "showplotborder": "0",
+                        "showlegend": "1",
+                        "legendborder": "0",
+                        "legendposition": "right",
+                        "enablesmartlabels": "1",
+                        "use3dlighting": "0",
+                        "showshadow": "0",
+                        "legendbgcolor": "#CCCCCC",
+                        "legendbgalpha": "20",
+                        "legendborderalpha": "0",
+                        "legendshadow": "0",
+                        "legendnumcolumns": "1",
+                        "palettecolors": "#0085c3,#7ab800,#f2af00,#dc5034,#6e2585,#71c6c1,#ce1126"
+                    },
+                    "data": [
+                        {
+                            "label": "1個月以內",
+                            "value": "15"
+                        },
+                        {
+                            "label": "1-2個月",
+                            "value": "20"
+                        },
+                        {
+                            "label": "3-6個月",
+                            "value": "20"
+                        },
+                        {
+                            "label": "3-6個月",
+                            "value": "25"
+                        },
+                        {
+                            "label": "6-12個月",
+                            "value": "8"
+                        },
+                        {
+                            "label": "12個月以上",
+                            "value": "10"
+                        },
+                        {
+                            "label": "從未聯繫",
+                            "value": "2"
+                        }
+                    ]
+                }
+            }).render();
+        });
+    </script>
+    <!-- 顧客最新交易距今天數 -->
+    <script type="text/javascript">
+        FusionCharts.ready(function () {
+            var visitChart = new FusionCharts({
+                type: 'pie2d',
+                renderAt: 'pie2',
+                width: '100%',
+                height: '300',
+                dataFormat: 'json',
+                dataSource: {
+                    "chart": {
+                        //"caption": "Expenditures Incurred in Publishing a Book",
+                        "bgcolor": "FFFFFF",
+                        "showvalues": "1",
+                        "showpercentvalues": "1",
+                        "showLabels": "0",
+                        "showborder": "0",
+                        "showplotborder": "0",
+                        "showlegend": "1",
+                        "legendborder": "0",
+                        "legendposition": "right",
+                        "enablesmartlabels": "1",
+                        "use3dlighting": "0",
+                        "showshadow": "0",
+                        "legendbgcolor": "#CCCCCC",
+                        "legendbgalpha": "20",
+                        "legendborderalpha": "0",
+                        "legendshadow": "0",
+                        "legendnumcolumns": "1",
+                        "palettecolors": "#0085c3,#7ab800,#f2af00,#dc5034,#6e2585,#71c6c1,#ce1126"
+                    },
+                    "data": [
+                        {
+                            "label": "一個月以內",
+                            "value": "25"
+                        },
+                        {
+                            "label": "1-2個月",
+                            "value": "20"
+                        },
+                        {
+                            "label": "3-6個月",
+                            "value": "20"
+                        },
+                        {
+                            "label": "3-6個月",
+                            "value": "15"
+                        },
+                        {
+                            "label": "6-12個月",
+                            "value": "10"
+                        },
+                        {
+                            "label": "12個月以上",
+                            "value": "8"
+                        },
+                        {
+                            "label": "無理財交易",
+                            "value": "2"
+                        }
+                    ]
+                }
+            }).render();
+        });
+    </script>
+    <!-- 前30大顧客貢獻度- -->
+    <script>
+        FusionCharts.ready(function () {
+            var revenueChart = new FusionCharts({
+                type: 'msbar2d',
+                renderAt: 'chart3',
+                width: '100%',
+                height: '300',
+                dataFormat: 'json',
+                dataSource: {
+                    "chart": {
+                        //"caption": "Business Results: 2005",
+                        //"yaxisname": "Revenue (Millions)",
+                        //"divlinedashlen": "1",
+                        //"divlinedashgap": "2",
+                        //"numberprefix": "$",
+                        "numbersuffix": "%",
+                        "chartrightmargin": "30",
+                        "paletteColors": "#0075c2",
+                        "bgColor": "#ffffff",
+                        "showBorder": "0",
+                        "showCanvasBorder": "0",
+                        "usePlotGradientColor": "0",
+                        "plotBorderAlpha": "10",
+                        "placeValuesInside": "1",
+                        "valueFontColor": "#ffffff",
+                        "showAxisLines": "1",
+                        "axisLineAlpha": "25",
+                        "divLineAlpha": "10",
+                        "alignCaptionWithCanvas": "0",
+                        "showAlternateVGridColor": "0",
+                        //"captionFontSize": "14",
+                        //"subcaptionFontSize": "14",
+                        //"subcaptionFontBold": "0",
+                        "toolTipColor": "#ffffff",
+                        "toolTipBorderThickness": "0",
+                        "toolTipBgColor": "#000000",
+                        "toolTipBgAlpha": "80",
+                        "toolTipBorderRadius": "2",
+                        "toolTipPadding": "5"
+                    },
+                    "categories": [
+                        {
+                            "category": [
+                                {
+                                    "label": "前5大"
+                                },
+                                {
+                                    "label": "前10大"
+                                },
+                                {
+                                    "label": "前15大"
+                                },
+                                {
+                                    "label": "前20大"
+                                },
+                                {
+                                    "label": "前30大"
+                                }
+                            ]
+                        }
+                    ],
+                    "dataset": [
+                        {
+                            // "seriesname": "AUM",
+                            //"color": "607142"
+                            "data": [
+                                {
+                                    "value": "20%",
+                                    "color": "6e2585"
+                                },
+                                {
+                                    "value": "55%",
+                                    "color": "ce1126"
+                                },
+                                {
+                                    "value": "60%",
+                                    "color": "f2af00"
+                                },
+                                {
+                                    "value": "75%",
+                                    "color": "71c6c1"
+                                },
+                                {
+                                    "value": "80%",
+                                    "color": "0085c3"
+                                }
+                            ]
+                        }
+                    ],
+                }
+            }).render();
+        });
+    </script>
+</body>
+</html>
