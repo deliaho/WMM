@@ -63,12 +63,12 @@
         {
             font-size: 16px;
         }
-       .fc-content
+
+        .fc-content
         {
             font-size: 15px;
             padding: 2px,2px,2px,2px;
         }
-        /* force color header of SUN - necessary because it will be garbled up until now */
     </style>
 </head>
 <!-- top & left 固定 -->
@@ -81,20 +81,19 @@
         <div id="main-navbar" class="navbar navbar-inverse" role="navigation">
             <!-- Main menu toggle -->
             <button type="button" id="main-menu-toggle"><i class="navbar-icon fa fa-bars icon"></i><span class="hide-menu-text">HIDE MENU</span></button>
-
             <div class="navbar-inner" style="height: 46px;">
                 <!-- Main navbar header -->
                 <div class="navbar-header">
                     <!-- Logo (height: 46px)-->
                     <a href="location.href='index.html">
                         <div class="navbar-brand no-padding-hr" style="margin-bottom: -2px; padding-top: 2px;">
-                            <img alt="logo" src="dist/img/logo_kgi.png" class="image img-responsive">
+                            <img class="img-responsive" src="dist/img/logo_kgi.png"  alt="logo">
+                        </div>
+                        <!-- Product name  (height: 46px)-->
+                        <div class="navbar-brand" style="margin-bottom: -5px;">
+                            <img class="img-responsive" src="dist/img/header_title.png" alt="WMM" >
                         </div>
                     </a>
-                    <!-- Product name  (height: 46px)-->
-                    <div class="navbar-brand" style="margin-bottom: -5px;">
-                        <img alt="WMM" src="dist/img/header_title.png" class="image img-responsive">
-                    </div>
                     <!-- Main navbar toggle -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
                 </div>
@@ -250,32 +249,6 @@
             <!-- / .navbar-inner -->
         </div>
         <!-- / #main-navbar -->
-        <!-- /2. $END_MAIN_NAVIGATION -->
-
-
-        <!-- 4. $MAIN_MENU =================================================================================
-
-		Main menu
-		
-		Notes:
-		* to make the menu item active, add a class 'active' to the <li>
-		  example: <li class="active">...</li>
-		* multilevel submenu example:
-			<li class="mm-dropdown">
-			  <a href="#"><span class="mm-text">Submenu item text 1</span></a>
-			  <ul>
-				<li>...</li>
-				<li class="mm-dropdown">
-				  <a href="#"><span class="mm-text">Submenu item text 2</span></a>
-				  <ul>
-					<li>...</li>
-					...
-				  </ul>
-				</li>
-				...
-			  </ul>
-			</li>
--->
         <div id="main-menu" role="navigation">
             <div id="main-menu-inner">
                 <ul class="navigation">
@@ -326,40 +299,34 @@
         </div>
         <!-- / #main-menu -->
         <div id="content-wrapper">
-            <div class="page-header no-padding " style="color: white; margin-bottom: -5px;">
-                <div class="row" style="background-color: #EB5405;">
-                    <!-- Page header, center on small screens -->
-                    <!--  <h1 class="col-xs-12 col-sm-4 text-center text-left-sm"><i class="fa fa-dashboard page-header-icon"></i>&nbsp;&nbsp;Dashboard</h1> -->
-                    <div class="col-md-9 col-sm-9">
-                        <form class="margin" role="search">
-                            <div class="btn-group">
-                                <select class="form-control select2" style="width: 120px;">
-                                    <option selected="selected">身分證號</option>
-                                    <option>姓名(模糊)</option>
-                                    <option>姓名(精準)</option>
-                                    <option>產品名稱</option>
-                                </select>
-                            </div>
-                            <div class="btn-group">
-                                <input type="text" class="form-control" style="width: 150px;">
-                            </div>
+            <div class="page-header no-padding" style="color: white; margin-bottom: -10px;">
+                <div class="row margin">
+                    <div class="col-md-5">
+                        <div class="input-group">
+                            <select class="form-control select2" style="width: 110px;">
+                                <option selected="selected">身分證號</option>
+                                <option>姓名(模糊)</option>
+                                <option>姓名(精準)</option>
+                                <option>產品名稱</option>
+                            </select>
+                            <input type="text" class="form-control" style="width: 150px;">
                             <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                        </form>
+                        </div>
                     </div>
-                    <div class="col-md-3  col-sm-3">
-                        <button type="button" class="btn btn-primary btn-lg margin pull-right"><i class="fa fa-cart-arrow-down margin-r-5"></i>快速下單</button>
+                    <div class="col-md-7 btn-group">
+                        <a href="index.html" class="btn btn-app btn-primary  btn-lg  active  " style="color: #f7ba9b;">
+                            <i class="fa fa-home"></i>首頁
+                        </a>
+                        <a href="index2.html" class="btn btn-app btn-primary btn-lg">
+                            <i class="fa fa-dashboard"></i>儀表板
+                        </a>
+                        <a href="index3.html" class="btn btn-app btn-primary btn-lg">
+                            <i class="fa fa-line-chart"></i>金融行情
+                        </a>
+                        <a href="index3.html" class="btn btn-app btn-primary btn-lg pull-right">
+                            <i class="fa fa-cart-arrow-down"></i>快速下單
+                        </a>
                     </div>
-                </div>
-                <div class="row margin text-center">
-                    <a href="index.html" class="btn btn-app btn-flat  btn-primary btn-lg  active">
-                        <i class="fa fa-home"></i>首頁
-                        </a>
-                    <a href="index2.html" class="btn btn-app btn-flat  btn-primary btn-lg">
-                        <i class="fa fa-dashboard"></i>儀表板
-                        </a>
-                    <a href="index3.html" class="btn btn-app btn-flat btn-primary btn-lg">
-                        <i class="fa fa-line-chart"></i>金融行情
-                        </a>
                 </div>
             </div>
             <!-- / .page-header -->
@@ -379,8 +346,7 @@
                                     <tr class=" bg-gray-light">
                                         <th>排名</th>
                                         <th>理專姓名</th>
-                                        <th>手收-本月新增<br />
-                                            12/01-12/31</th>
+                                        <th>手收-本月新增</th>
                                         <th>本月達成率</th>
                                         <th>逐月累積目標<br />
                                             達成率</th>
