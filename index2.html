@@ -258,22 +258,30 @@
             <div id="main-menu-inner">
                 <ul class="navigation">
                     <li>
-                        <a href="index.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">理財專員</span></a>
+                        <a href="index.html"><i class="menu-icon fa fa-home"></i><span class="mm-text">首頁</span></a>
+                    </li>
+                    <li  class="active">
+                        <a href="index2.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">儀表板</span></a>
                     </li>
                     <li>
-                        <a href="stat-panels.html"><i class="menu-icon fa fa-tasks"></i><span class="mm-text">首頁</span></a>
+                        <a href="index3.html"><i class="menu-icon fa fa-line-chart"></i><span class="mm-text">金融行情</span></a>
                     </li>
                     <li class="mm-dropdown">
-                        <a href="#"><i class="menu-icon fa fa-th"></i><span class="mm-text">客戶全覽</span></a>
+                        <a href="#"><i class="menu-icon fa fa-th"></i><span class="mm-text">客戶財富資料</span></a>
                         <ul>
-                            <li>
-                                <a tabindex="-1" href="layouts-grid.html"><span class="mm-text">Grid</span></a>
-                            </li>
-                            <li>
-                                <a tabindex="-1" href="layouts-main-menu.html"><i class="menu-icon fa fa-th-list"></i><span class="mm-text">Main menu</span><span class="label label-warning">Updated</span></a>
-                            </li>
+                            <li><a tabindex="-1" href="crm01.html"><span class="mm-text">存摺、貸款</span></a></li>
+                            <li><a tabindex="-1" href="crm02.html"><span class="mm-text">基金、債券、ETF</span></a></li>
+                            <li><a tabindex="-1" href="crm03.html"><span class="mm-text">在途投資明細</span></a></li>
+                            <li><a tabindex="-1" href="crm04.html"><span class="mm-text">保險</span></a></li>
+                            <li><a tabindex="-1" href="crm05.html"><span class="mm-text">黃金存摺</span></a></li>
+                            <li><a tabindex="-1" href="crm06.html"><span class="mm-text">組合式產品</span></a></li>
+                            <li><a tabindex="-1" href="crm07.html"><span class="mm-text">票債券</span></a></li>
+                            <li><a tabindex="-1" href="crm08.html"><span class="mm-text">信用卡</span></a></li>
+                            <li><a tabindex="-1" href="crm09.html"><span class="mm-text">證券</span></a></li>
+                            <li><a tabindex="-1" href="crm10.html"><span class="mm-text">Mail</span></a></li>
                         </ul>
                     </li>
+                    <!--
                     <li>
                         <a href="stat-panels.html"><i class="menu-icon fa fa-tasks"></i><span class="mm-text">客戶資產</span></a>
                     </li>
@@ -297,6 +305,7 @@
                     <li>
                         <a href="complete-ui.html"><i class="menu-icon fa fa-briefcase"></i><span class="mm-text">訪談記錄查詢</span></a>
                     </li>
+                    -->
                 </ul>
                 <!-- / .navigation -->
             </div>
@@ -304,40 +313,32 @@
         </div>
         <!-- / #main-menu -->
         <div id="content-wrapper">
-            <div class="page-header no-padding " style="color: white; margin-bottom: -5px;">
-                <div class="row" style="background-color: #EB5405;">
-                    <!-- Page header, center on small screens -->
-                    <!--  <h1 class="col-xs-12 col-sm-4 text-center text-left-sm"><i class="fa fa-dashboard page-header-icon"></i>&nbsp;&nbsp;Dashboard</h1> -->
-                    <div class="col-md-9 col-sm-9">
-                        <form class="margin" role="search">
-                            <div class="btn-group">
-                                <select class="form-control select2" style="width: 120px;">
-                                    <option selected="selected">身分證號</option>
-                                    <option>姓名(模糊)</option>
-                                    <option>姓名(精準)</option>
-                                    <option>產品名稱</option>
-                                </select>
-                            </div>
-                            <div class="btn-group">
-                                <input type="text" class="form-control" style="width: 150px;">
-                            </div>
+            <div class="page-header no-padding" style="color: white; margin-bottom: -10px;">
+                <div class="row margin">
+                    <div class="col-md-5">
+                        <div class="input-group">
+                            <select class="form-control select2" style="width: 110px;">
+                                <option selected="selected">身分證號</option>
+                                <option>姓名(模糊)</option>
+                                <option>姓名(精準)</option>
+                                <option>產品名稱</option>
+                            </select>
+                            <input type="text" class="form-control" style="width: 150px;">
                             <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                        </form>
+                        </div>
                     </div>
-                    <div class="col-md-3  col-sm-3">
-                        <button type="button" class="btn btn-primary btn-lg margin pull-right"><i class="fa fa-cart-arrow-down margin-r-5"></i>快速下單</button>
+                    <div class="col-md-7 btn-group">
+                        <a href="index.html" class="btn btn-app btn-primary  btn-lg">
+                            <i class="fa fa-home"></i>首頁
+                        </a>
+                        <a href="index2.html" class="btn btn-app btn-primary btn-lg active" style="color: #f7ba9b;">
+                            <i class="fa fa-dashboard"></i>儀表板
+                        </a>
+                        <a href="index3.html" class="btn btn-app btn-primary btn-lg">
+                            <i class="fa fa-line-chart"></i>金融行情
+                        </a>
+                        <button class=" btn btn-primary pull-right"><i class="fa fa-cart-arrow-down margin-r-5"></i>快速下單</button>
                     </div>
-                </div>
-                <div class="row margin text-center">
-                    <a href="index.html" class="btn btn-app btn-flat  btn-primary btn-lg ">
-                        <i class="fa fa-home"></i>首頁
-                        </a>
-                    <a href="index2.html" class="btn btn-app btn-flat  btn-primary btn-lg  active">
-                        <i class="fa fa-dashboard"></i>儀表板
-                        </a>
-                    <a href="index3.html" class="btn btn-app btn-flat btn-primary btn-lg">
-                        <i class="fa fa-line-chart"></i>金融行情
-                        </a>
                 </div>
             </div>
             <!-- / .page-header -->

@@ -271,7 +271,6 @@
                     <li>
                         <a href="index3.html"><i class="menu-icon fa fa-line-chart"></i><span class="mm-text">金融行情</span></a>
                     </li>
-
                     <li class="mm-dropdown active">
                         <a href="#"><i class="menu-icon fa fa-th"></i><span class="mm-text">客戶財富資料</span></a>
                         <ul>
@@ -287,6 +286,7 @@
                             <li><a tabindex="-1" href="crm10.html"><span class="mm-text">Mail</span></a></li>
                         </ul>
                     </li>
+                    <!--
                     <li>
                         <a href="stat-panels.html"><i class="menu-icon fa fa-tasks"></i><span class="mm-text">客戶資產</span></a>
                     </li>
@@ -310,6 +310,7 @@
                     <li>
                         <a href="complete-ui.html"><i class="menu-icon fa fa-briefcase"></i><span class="mm-text">訪談記錄查詢</span></a>
                     </li>
+                    -->
                 </ul>
                 <!-- / .navigation -->
             </div>
@@ -317,28 +318,55 @@
         </div>
         <!-- / #main-menu -->
         <div id="content-wrapper">
-            <div class="page-header no-padding" style="color: white; margin-bottom: -10px;">
+            <div class="page-header no-padding" style="margin-bottom: -10px;">
                 <div class="row margin">
+                    <div class="col-md-4 col-lg-4 no-padding-hr">
+                        <div class="input-group">
+                            <select class="form-control select2" style="width: 120px;">
+                                <option selected="selected">身分證號</option>
+                                <option>姓名(模糊)</option>
+                                <option>姓名(精準)</option>
+                                <option>產品名稱</option>
+                            </select>
+                            <input type="text" class="form-control" style="width: 150px;">
+                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-lg-8 no-padding-hr">
+                        <div class="col-md-5 col-lg-5 text-center no-padding-hr" style="font-size: smaller; color: #eb5405;">
+                            <i class="glyphicon glyphicon-user margin-r-5"></i>
+                            <label>陳Ｏ成</label>
+                            <label>A123456789</label>
+                        </div>
+                        <div class="col-md-5 col-lg-5 btn-group  no-padding-hr">
+                            <button class="btn btn-primary">全覽</button>
+                            <button class="btn btn-primary">風險控管</button>
+                            <button class="btn btn-primary">新增訪談</button>
+                        </div>
+                        <div class="col-md-2  no-padding-hr">
+                            <button class=" btn btn-primary"><i class="fa fa-cart-arrow-down margin-r-5"></i>快速下單</button>
+                        </div>
+                    </div>
                     <div class="col-md-12 text-center">
-                        <a href="crm01.html" class="btn btn-app btn-primary  btn-lg  active  " style="color: #f7ba9b;">
-                            <i class="glyphicon glyphicon-piggy-bank"></i><span>存款、貸款</span>
+                        <a href="crm01.html" class="btn btn-app btn-primary  btn-lg  active" style="color: #f7ba9b;" >
+                            <i class="glyphicon glyphicon-piggy-bank"></i><span>存/貸款</span>
                         </a>
                         <a href="crm02.html" class="btn btn-app btn-primary btn-lg">
-                            <i class="fa  fa-pie-chart"></i>基金、債券、ETF
+                            <i class="fa  fa-pie-chart"></i>基/債/ETF
                         </a>
                         <a href="crm03.html" class="btn btn-app btn-primary btn-lg">
-                            <i class="fa fa-truck"></i>在途投資明細
+                            <i class="fa fa-truck"></i>在途
                         </a>
-                        <a href="crm04.html" class="btn btn-app btn-primary btn-lg">
+                        <a href="crm04.html" class="btn btn-app btn-primary btn-lg" >
                             <i class="fa fa-umbrella"></i>保險
                         </a>
-                        <a href="crm05.html" class="btn btn-app btn-primary btn-lg">
+                        <a href="crm05.html" class="btn btn-app btn-primary btn-lg" >
                             <i class="glyphicon glyphicon-hdd"></i>黃金存摺
                         </a>
-                        <a href="crm06.html" class="btn btn-app btn-primary btn-lg">
+                        <a href="crm06.html" class="btn btn-app btn-primary btn-lg"  >
                             <i class="	fa fa-cubes"></i>組合式產品
                         </a>
-                        <a href="crm07.html" class="btn btn-app btn-primary btn-lg">
+                        <a href="crm07.html" class="btn btn-app btn-primary btn-lg" >
                             <i class="fa fa-money"></i>票債券
                         </a>
                         <a href="crm08.html" class="btn btn-app btn-primary btn-lg">
@@ -357,27 +385,27 @@
             <!-- Main content -->
             <section class="content">
                 <div class="row">
-                    <div class="col-md-6 form-group margin-bottom-none" >
-                        <!--<h4><label class="col-md-2 control-label">關係人：</label></h4>-->
-                        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3 pad text-right" style="font-size: 16px; color: black;">關係戶：</div>
-                        <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3 ">
-                            <select class="form-control select2">
+                    <div class="panel">
+                        <!-- .panel-header -->
+                        <div class="panel-heading">
+                            <span class="panel-title"><i class="fa fa-sitemap margin-r-5"></i>關係戶：</span>
+                            <select class="select2" style="width: 120px;">
                                 <option selected="selected">本人</option>
                             </select>
                         </div>
-                        <div class="col-md-6 col-md-6 col-md-6  pad" style="font-size: 16px; color: black;">即時歸戶帳號查詢</div>
-                    </div>
-                </div>
-                <div class="row ">
-                    <!-- 台幣活期存款-->
-                    <div class="col-md-12 col-lg-6">
-                        <div class="box  box-primary box-solid">
-                            <div class="box-header with-border">
-                                <h3 class="box-title"><i class="glyphicon glyphicon-piggy-bank margin-r-5"></i>台幣活期存款</h3>
-                            </div>
-                            <!-- /.box-header -->
-                            <div class="box-body">
-                                <table id="table1" class="table table-bordered table-hover">
+                        <!-- / .panel-header -->
+                        <div class="panel-body">
+                            <div class="panel-group panel-group-dark-gray" id="accordion-example">
+                                <!-- 信用卡明細 -->
+                                <div class="panel">
+                                    <div class="panel-heading" style="font-size: 16px;">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-example" href="#collapse1">台幣活期存款
+                                        </a>
+                                    </div>
+                                    <!-- / .panel-heading -->
+                                    <div id="collapse1" class="panel-collapse in">
+                                        <div class="panel-body">
+                                <table id="table3" class="table table-bordered table-hover">
                                     <thead>
                                         <tr class=" bg-gray-light">
                                             <th class="text-center">存款帳號</th>
@@ -399,21 +427,21 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                            <!-- /.box-body -->
-                        </div>
-                        <!-- /.box -->
-                    </div>
-                    <!-- /.col -->
-                    <!-- 支票存款-->
-                    <div class="col-md-12 col-lg-6">
-                        <div class="box  box-primary box-solid">
-                            <div class="box-header with-border">
-                                <h3 class="box-title"><i class="fa fa-book margin-r-5"></i>支票存款</h3>
-                            </div>
-                            <!-- /.box-header -->
-                            <div class="box-body">
-                                <table id="table2" class="table table-bordered table-hover">
+                                        </div>
+                                        <!-- / .panel-body -->
+                                    </div>
+                                    <!-- / .collapse -->
+                                </div>
+                                <!-- / .panel -->
+                                <!-- 歸戶總覽 -->
+                                <div class="panel">
+                                    <div class="panel-heading" style="font-size: 16px;">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-example" href="#collapse2">支票存款</a>
+                                    </div>
+                                    <!-- / .panel-heading -->
+                                    <div id="collapse2" class="panel-collapse in">
+                                        <div class="panel-body">
+                                <table id="table4" class="table table-bordered table-hover">
                                     <thead>
                                         <tr class=" bg-gray-light">
                                             <th class="text-center">存款帳號</th>
@@ -468,24 +496,26 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                        </div>
+                                        <!-- / .panel-body -->
+                                    </div>
+                                    <!-- / .collapse -->
+                                </div>
+                                <!-- / .panel -->
                             </div>
-                            <!-- /.box-body -->
+                            <!-- / .panel-group -->
                         </div>
-                        <!-- /.box -->
+                        <div class="panel-footer comment-footer">
+                            <h4>【注意】</h4>
+                            <ol style="font-size: 15px;">
+                                <li>資料日期：2015/12/31</li>
+                                <li>以上資料均以本行帳記載為主，本資料僅供參考。</li>
+                                <li>理財專員陳ＯＯ於2016/01/02 9:00 查詢。</li>
+                            </ol>
+                        </div>
                     </div>
-                    <!-- /.col -->
                 </div>
             </section>
-            <!-- 分隔線 -->
-            <hr class="no-grid-gutter-h grid-gutter-margin-b no-margin-t">
-            <div class="row box-comment">
-                <h4 >【注意】</h4>
-                    <ol style="font-size:15px;">
-                        <li>資料日期：2015/12/31</li>
-                        <li>以上資料均以本行帳記載為主，本資料僅供參考。</li>
-                        <li>理財專員陳ＯＯ於2016/01/02 9:00 查詢。</li>
-                    </ol>
-            </div>
         </div>
         <!-- / #content-wrapper -->
         <div id="main-menu-bg"></div>
