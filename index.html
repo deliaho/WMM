@@ -58,16 +58,22 @@
         {
             font-size: 18px;
         }
-
         th.fc-day-header.fc-widget-header.fc-sat
         {
             font-size: 16px;
         }
-
         .fc-content
         {
             font-size: 15px;
             padding: 2px,2px,2px,2px;
+        }
+        .btn-app 
+        {
+           margin: 1px -2px 1px -2px;   /* 上下避免連在一起，左右距離縮小，如果用 btn-group 無法置中，所以修改btn-app*/
+        }
+        td
+        {
+            word-break: break-all;  /*數字依照版面換行*/
         }
     </style>
 </head>
@@ -85,9 +91,10 @@
                 <!-- Main navbar header -->
                 <div class="navbar-header">
                     <!-- Logo (height: 46px)-->
-                    <a href="location.href='index.html">
+                    <a href="index.html">
                         <div class="navbar-brand no-padding-hr" style="margin-bottom: -2px; padding-top: 2px;">
-                            <img class="img-responsive" src="dist/img/logo_kgi.png"  alt="logo">
+                            <!-- <img class="logo-mini" src="dist/img/logo-mini.png"  alt="logo" > -->
+                            <img class="logo-lg" src="dist/img/logo_kgi.png"  alt="logo" >
                         </div>
                         <!-- Product name  (height: 46px)-->
                         <div class="navbar-brand" style="margin-bottom: -5px;">
