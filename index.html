@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- url icon -->
+    <link rel="shortcut icon" href="dist/img/favicon.ico" />
+    <link rel="icon" type="image/gif" href="dist/img/animated_favicon.gif">
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- DataTables -->
@@ -92,9 +95,8 @@
                 <div class="navbar-header">
                     <!-- Logo (height: 46px)-->
                     <a href="index.html">
-                        <div class="navbar-brand no-padding-hr" style="margin-bottom: -2px; padding-top: 2px;">
-                            <!-- <img class="logo-mini" src="dist/img/logo-mini.png"  alt="logo" > -->
-                            <img class="logo-lg" src="dist/img/logo_kgi.png"  alt="logo" >
+                        <div class="navbar-brand no-padding-hr" style="margin-bottom: 2px; padding-top: 4px;">
+                            <img class="logo-lg img-responsive" style="height:38px;" src="dist/img/logo.jpg"  alt="logo" >
                         </div>
                         <!-- Product name  (height: 46px)-->
                         <div class="navbar-brand" style="margin-bottom: -5px;">
@@ -239,7 +241,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" " class="dropdown-toggle user-menu" data-toggle="dropdown">
+                                    <a href="signin.html">
                                         <i class="nav-icon glyphicon glyphicon-log-out" style="color: #3cba54;"></i>
                                         <span class="small-screen-text">登出</span>
                                         <span id="clock" class="label bg-red"></span>
@@ -566,7 +568,7 @@
                                         <a href="#uidemo-tabs-default-demo-home" data-toggle="tab">一般提醒<span class="label label-success">12</span></a>
                                     </li>
                                     <li class="">
-                                        <a href="#uidemo-tabs-default-demo-profile" data-toggle="tab">交易提醒<span class="label label-success">12</span></a>
+                                        <a href="#uidemo-tabs-default-demo-profile" data-toggle="tab">交易提醒<span class="label label-success">3</span></a>
                                     </li>
                                     <!-- / .dropdown -->
                                 </ul>
@@ -575,47 +577,47 @@
                                         <table class="table table-bordered table-striped-column">
                                             <tr>
                                                 <th>客戶動態歸戶</th>
-                                                <th>0</th>
+                                                <th class="text-right">3</th>
                                                 <th>基金停損停利</th>
-                                                <th>0</th>
+                                                <th class="text-right">2</th>
                                                 <th>定存提醒</th>
-                                                <th>0</th>
+                                                <th class="text-right">0</th>
                                             </tr>
                                             <tr>
                                                 <th>配息及贖回</th>
-                                                <th>0</th>
+                                                <th class="text-right">1</th>
                                                 <th>生日提醒</th>
-                                                <th>0</th>
+                                                <th class="text-right">2</th>
                                                 <th>大額資產異動</th>
-                                                <th>0</th>
+                                                <th class="text-right">0</th>
                                             </tr>
                                             <tr>
                                                 <th>客戶分配</th>
-                                                <th>0</th>
+                                                <th class="text-right">0</th>
                                                 <th>資產定期檢視</th>
-                                                <th>0</th>
+                                                <th class="text-right">0</th>
                                                 <th>產品到價</th>
-                                                <th>0</th>
+                                                <th class="text-right">0</th>
                                             </tr>
                                             <tr>
                                                 <th>匯率到價</th>
-                                                <th>0</th>
+                                                <th class="text-right">2</th>
                                                 <th>紀念日提醒</th>
-                                                <th>0</th>
+                                                <th class="text-right">0</th>
                                                 <th>未理財下單</th>
-                                                <th>0</th>
+                                                <th class="text-right">0</th>
                                             </tr>
                                             <tr>
                                                 <th>比價日提醒</th>
-                                                <th>0</th>
+                                                <th class="text-right">0</th>
                                                 <th>保險續期/到期</th>
-                                                <th>0</th>
+                                                <th class="text-right">2</th>
                                                 <th>黃金停損停利</th>
-                                                <th>0</th>
+                                                <th class="text-right">0</th>
                                             </tr>
                                             <tr>
                                                 <th>KYC到期提醒</th>
-                                                <th>0</th>
+                                                <th class="text-right">1</th>
                                             </tr>
                                         </table>
                                     </div>
@@ -623,12 +625,12 @@
                                     <div class="tab-pane fade" id="uidemo-tabs-default-demo-profile">
                                         <table class="table table-bordered table-striped-column">
                                             <tr>
-                                                <th>定期(不)定額扣款失敗</th>
-                                                <th>0</th>
+                                                <th >定期(不)定額扣款失敗</th>
+                                                <th class="text-right">0</th>
                                                 <th>定期(不)定額暫停扣款</th>
-                                                <th>0</th>
+                                                <th class="text-right">0</th>
                                                 <th>基金手續費優惠提醒</th>
-                                                <th>0</th>
+                                                <th class="text-right">3</th>
                                             </tr>
                                         </table>
                                     </div>
@@ -710,11 +712,11 @@
                                         <tr>
                                             <td rowspan="3" class=" bg-gray-light">初訪</td>
                                             <td class=" bg-gray-light">行銷活動</td>
-                                            <td class="text-right">0</td>
+                                            <td class="text-right">3</td>
                                         </tr>
                                         <tr>
                                             <td class=" bg-gray-light">一般通知</td>
-                                            <td class="text-right">0</td>
+                                            <td class="text-right">2</td>
                                         </tr>
                                         <tr>
                                             <td class=" bg-gray-light">訪問調查</td>
@@ -723,7 +725,7 @@
                                         <tr>
                                             <td rowspan="2" class=" bg-gray-light">續訪</td>
                                             <td class=" bg-gray-light">行銷活動</td>
-                                            <td class="text-right">0</td>
+                                            <td class="text-right">2</td>
                                         </tr>
                                         <tr>
                                             <td class=" bg-gray-light">一般通知</td>
@@ -732,11 +734,11 @@
                                         <tr>
                                             <td  rowspan="2" class=" bg-gray-light">追蹤名單</td>
                                             <td class=" bg-gray-light">行銷活動</td>
-                                            <td class="text-right">0</td>
+                                            <td class="text-right">1</td>
                                         </tr>
                                         <tr>
                                             <td class=" bg-gray-light">一般通知</td>
-                                            <td class="text-right">0</td>
+                                            <td class="text-right">4</td>
                                         </tr>
                                     </tbody>
                                 </table>
