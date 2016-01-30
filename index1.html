@@ -263,14 +263,27 @@
                     <li>
                         <a href="index.html"><i class="menu-icon fa fa-home"></i><span class="mm-text">首頁</span></a>
                     </li>
-                    <li>
+                    <li  class="active">
                         <a href="index1.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">主管儀表板</span></a>
                     </li>
-                    <li  class="active">
+                    <li>
                         <a href="index2.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">理專儀表板</span></a>
-                    </li>                    
+                    </li>
                     <li>
                         <a href="index3.html"><i class="menu-icon fa fa-line-chart"></i><span class="mm-text">金融行情</span></a>
+                    </li>
+                    <li class="mm-dropdown">
+                        <a href="#"><i class="menu-icon fa fa-diamond"></i><span class="mm-text">客戶管理</span></a>
+                        <ul>
+                            <li><a tabindex="-1" href="crm21.html"><span class="mm-text">基本資料</span></a></li>
+                            <li><a tabindex="-1" href="crm22.html"><span class="mm-text">客戶資訊</span></a></li>
+                            <li><a tabindex="-1" href="crm23.html"><span class="mm-text">財富資料</span></a></li>
+                            <li><a tabindex="-1" href="crm24.html"><span class="mm-text">資產結構</span></a></li>
+                            <li><a tabindex="-1" href="crm25.html"><span class="mm-text">交易紀錄查詢</span></a></li>
+                            <li><a tabindex="-1" href="crm26.html"><span class="mm-text">已贖回損益查詢</span></a></li>
+                            <li><a tabindex="-1" href="crm27.html"><span class="mm-text">訪談紀錄</span></a></li>
+                            <li><a tabindex="-1" href="crm28.html"><span class="mm-text">KYC相關</span></a></li>
+                        </ul>
                     </li>
                     <li class="mm-dropdown">
                         <a href="#"><i class="menu-icon fa fa-th"></i><span class="mm-text">客戶財富資料</span></a>
@@ -324,10 +337,10 @@
                     <div class="col-md-5">
                         <div class="input-group">
                             <select class="form-control select2" style="width: 110px;">
-                                <option selected="selected">身分證號</option>
+                                <option>身分證號</option>
                                 <option>姓名(模糊)</option>
                                 <option>姓名(精準)</option>
-                                <option>產品名稱</option>
+                                <option selected="selected">產品名稱</option>
                             </select>
                             <input type="text" class="form-control" style="width: 150px;">
                             <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
@@ -337,61 +350,154 @@
                         <a href="index.html" class="btn btn-app btn-primary  btn-lg">
                             <i class="fa fa-home"></i>首頁
                         </a>
-                        <a href="index1.html" class="btn btn-app btn-primary btn-lg">
+                        <a href="index1.html" class="btn btn-app btn-primary btn-lg active" style="color: #f7ba9b;">
                             <i class="fa fa-dashboard"></i>主管儀表板
                         </a>
-                        <a href="index2.html" class="btn btn-app btn-primary btn-lg active" style="color: #f7ba9b;">
+                        <a href="index2.html" class="btn btn-app btn-primary btn-lg">
                             <i class="fa fa-dashboard"></i>理專儀表板
                         </a>
                         <a href="index3.html" class="btn btn-app btn-primary btn-lg">
                             <i class="fa fa-line-chart"></i>金融行情
                         </a>
-                        <button class=" btn btn-primary pull-right"><i class="fa fa-cart-arrow-down margin-r-5"></i>快速下單</button>
+                        <button class=" btn btn-primary pull-right hidden"><i class="fa fa-cart-arrow-down margin-r-5"></i>快速下單</button>
                     </div>
                 </div>
             </div>
             <!-- / .page-header -->
             <!-- Main content -->
             <section class="content">
+                <div class="row margin-bottom" >
+                    <div class="col-md-12">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <label class="control-label">區名稱</label>
+                                <select class="form-control select2">
+                                    <option value="991" selected="selected">北一區運中心</option>
+                                    <option value="992">北二區運中心</option>
+                                    <option value="993">北三區運中心</option>
+                                    <option value="994">中區區運中心</option>
+                                    <option value="995">南一區運中心</option>
+                                    <option value="996">南二區運中心</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                               <label class="control-label">分行名稱</label>
+                                <select class="form-control select2">
+                                    <option value="001" lang="001" selected>吉林分行</option>
+                                    <option value="010" lang="010">營業部</option>
+                                    <option value="020" lang="020">仁愛分行</option>
+                                    <option value="021" lang="021">松山分行</option>
+                                    <option value="022" lang="022">建成分行</option>
+                                    <option value="023" lang="023">士林分行</option>
+                                    <option value="040" lang="040">松江分行</option>
+                                    <option value="050" lang="050">台北分行</option>
+                                    <option value="060" lang="060">萬華分行</option>
+                                    <option value="070" lang="070">復興分行</option>
+                                    <option value="080" lang="080">中山分行</option>
+                                    <option value="081" lang="081">建國分行</option>
+                                    <option value="082" lang="082">內湖分行</option>
+                                    <option value="090" lang="090">南京東路分行</option>
+                                    <option value="100" lang="100">忠孝分行</option>
+                                    <option value="101" lang="101">東台北分行</option>
+                                    <option value="102" lang="102">世貿分行</option>
+                                    <option value="103" lang="103">永春分行</option>
+                                    <option value="105" lang="105">南港分行</option>
+                                    <option value="110" lang="110">松南分行</option>
+                                    <option value="111" lang="111">東湖分行</option>
+                                    <option value="120" lang="120">大安分行</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 <div class="row ">
-                    <!-- 顧客最新交易距今天數 -->
-                    <div class="col-md-6 col-lg-4">
+                    <!-- 理專成績 -->
+                    <div class="col-md-12 col-lg-6">
+                        <div class="box box-primary box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title"><i class="fa  fa-suitcase margin-r-5"></i>理專成績</h3>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <table class="table table-bordered table-striped">
+                                    <thead>
+                                        <tr class=" bg-gray-light">
+                                            <th class="no-padding-hr text text-center">單位</>
+                                            <th class="no-padding-hr text text-center">理專</th>
+                                            <th class="no-padding-hr text text-center">基金</th>
+                                            <th class="no-padding-hr text text-center">保險</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">吉林分行</td>
+                                            <td class="text-center">吉林理1</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">吉林分行</td>
+                                            <td class="text-center">吉林理2</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">吉林分行</td>
+                                            <td class="text-center">吉林理主</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">吉林分行</td>
+                                            <td class="text-center">吉林主</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                        </tr>
+                                    </tbody>                                   
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- 理財滲透率 -->
+                    <div class="col-md-12 col-lg-6">
                         <div class="box  box-primary box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">
-                                    <i class="icon fa fa-pie-chart margin-r-5"></i>顧客交易數</h3>
+                                    <i class="icon fa fa-bar-chart margin-r-5"></i>理財滲透率</h3>
                                     <button class="btn btn-default pull-right">明細</button>
                             </div>
                             <div class="box-body">
                                 <div class="box-body chart-responsive">
-                                    <div id="pie1" class="chart"></div>
+                                    <div id="chart1" class="chart"></div>
                                 </div>
                             </div>
                             <!-- /.box-body -->
                         </div>
                     </div>
-                    <!-- 顧客最新交易距今天數 -->
-                    <div class="col-md-6 col-lg-4">
+                    <!-- /.col -->
+                    <!-- 客戶最新交易距今天數 -->
+                    <div class="col-md-12 col-lg-6">
                         <div class="box  box-primary box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">
-                                    <i class="icon fa fa-pie-chart margin-r-5"></i>顧客訪談數</h3>
+                                    <i class="icon fa fa-bar-chart margin-r-5"></i>客戶最新交易距今天數</h3>
                                     <button class="btn btn-default pull-right">明細</button>
                             </div>
                             <div class="box-body">
                                 <div class="box-body chart-responsive">
-                                    <div id="pie2" class="chart"></div>
+                                    <div id="chart2" class="chart"></div>
                                 </div>
                             </div>
                             <!-- /.box-body -->
                         </div>
                     </div>
-                    <!-- 前30大客戶貢獻度佔比-->
-                    <div class="col-md-6 col-lg-4">
+                    <!-- 客戶最新訪談紀錄距今天數 -->
+                    <div class="col-md-12 col-lg-6">
                         <div class="box  box-primary box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">
-                                    <i class="icon fa  fa-line-chart margin-r-5"></i>前30大客戶貢獻度</h3>
+                                    <i class="icon fa fa-bar-chart margin-r-5"></i>客戶最新訪談紀錄距今天數</h3>
                                     <button class="btn btn-default pull-right">明細</button>
                             </div>
                             <div class="box-body">
@@ -402,145 +508,70 @@
                             <!-- /.box-body -->
                         </div>
                     </div>
-                </div>
-                <div class="row ">
-                    <!-- 前50大顧客資產時序變化-->
-                    <div class="col-md-12 col-lg-12">
-                        <div class="box box-primary box-solid">
+                    <!-- 前30大客戶貢獻度佔比-->
+                    <div class="col-md-12 col-lg-6">
+                        <div class="box  box-primary box-solid">
                             <div class="box-header with-border">
-                                <h3 class="box-title"><i class="fa fa-group margin-r-5"></i>前50大顧客資產時序變化</h3>
+                                <h3 class="box-title">
+                                    <i class="icon fa  fa-line-chart margin-r-5"></i>前30大客戶貢獻度</h3>
+                                    <button class="btn btn-default pull-right">明細</button>
                             </div>
-                            <!-- /.box-header -->
                             <div class="box-body">
-                                <table class="table table-bordered table-striped">
-                                    <thead>
-                                        <tr class=" bg-gray-light">
-                                            <th class="no-padding-hr text text-center">資產項目平均餘額</>
-                                            <th class="no-padding-hr text text-center">台幣活存</th>
-                                            <th class="no-padding-hr text text-center">外幣活存</th>
-                                            <th class="no-padding-hr text text-center">台幣定存</th>
-                                            <th class="no-padding-hr text text-center">外幣定存</th>
-                                            <th class="no-padding-hr text text-center">基金餘額</th>
-                                            <th class="no-padding-hr text text-center">ETF餘額</th>
-                                            <th class="no-padding-hr text text-center">債券餘額</th>
-                                            <th class="no-padding-hr text text-center">連動債餘額</th>
-                                            <th class="no-padding-hr text text-center">DCI</th>
-                                            <th class="no-padding-hr text text-center">RP金額</th>
-                                            <th class="no-padding-hr text text-center">保險</th>
-                                            <th class="no-padding-hr text text-center">黃金存摺</th>
-                                            <th class="no-padding-hr text text-center">理財總AUM</th>
-                                            <th class="no-padding-hr text text-center">總AUM餘額</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-center">目前</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">1個月前</td>
-                                            <td class="text-right">10.94</td>
-                                            <td class="text-right">3.18</td>
-                                            <td class="text-right">18.61</td>
-                                            <td class="text-right">7.59</td>
-                                            <td class="text-right">0.55</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.05</td>
-                                            <td class="text-right">0.05</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.04</td>
-                                            <td class="text-right">0.65</td>
-                                            <td class="text-right">40.98</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">3個月前</td>
-                                            <td class="text-right">10.94</td>
-                                            <td class="text-right">3.18</td>
-                                            <td class="text-right">18.61</td>
-                                            <td class="text-right">7.59</td>
-                                            <td class="text-right">0.55</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.05</td>
-                                            <td class="text-right">0.05</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.04</td>
-                                            <td class="text-right">0.65</td>
-                                            <td class="text-right">40.98</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">6個月前</td>
-                                            <td class="text-right">10.94</td>
-                                            <td class="text-right">3.18</td>
-                                            <td class="text-right">18.61</td>
-                                            <td class="text-right">7.59</td>
-                                            <td class="text-right">0.55</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.05</td>
-                                            <td class="text-right">0.05</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.04</td>
-                                            <td class="text-right">0.65</td>
-                                            <td class="text-right">40.98</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center">12個月前</td>
-                                            <td class="text-right">10.94</td>
-                                            <td class="text-right">3.18</td>
-                                            <td class="text-right">18.61</td>
-                                            <td class="text-right">7.59</td>
-                                            <td class="text-right">0.55</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.05</td>
-                                            <td class="text-right">0.05</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.00</td>
-                                            <td class="text-right">0.04</td>
-                                            <td class="text-right">0.65</td>
-                                            <td class="text-right">40.98</td>
-                                        </tr>
-                                    </tbody>                                   
-                                </table>
-                                <span class="pull-right">單位：百萬元</span>
+                                <div class="box-body chart-responsive">
+                                    <div id="chart4" class="chart"></div>
+                                </div>
                             </div>
-                            <!-- <div class="box-footer">
-                                1. 理財戶：有理財庫存戶(理財AUM大於0)<br />
-                                2. 流失警示戶：曾往來過理財但已逾六個月未往來理財<br />
-                                3. 流失戶：曾往過理財但已逾一年未往來理財</div> -->
                             <!-- /.box-body -->
                         </div>
-                        <!-- /.box -->
                     </div>
-                    <!-- /.col -->
+                    <!-- AUM級距v.s貢獻度佔比-->
+                    <div class="col-md-12 col-lg-6">
+                        <div class="box  box-primary box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">
+                                    <i class="icon fa  fa-line-chart margin-r-5"></i>AUM級距v.s貢獻度佔比</h3>
+                                    <button class="btn btn-default pull-right">明細</button>
+                            </div>
+                            <div class="box-body">
+                                <div class="box-body chart-responsive">
+                                    <div id="chart5" class="chart"></div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                    <!-- A前50大客戶資產序時變化-->
+                    <div class="col-md-12 col-lg-6">
+                        <div class="box  box-primary box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">
+                                    <i class="icon fa  fa-line-chart margin-r-5"></i>前50大客戶資產序時變化</h3>
+                                    <button class="btn btn-default pull-right">明細</button>
+                            </div>
+                            <div class="box-body">
+                                <div class="box-body chart-responsive">
+                                    <div id="chart6" class="chart"></div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
                 </div>
                 <div class="row ">
                     <!-- 顧客投資資產報酬率－依顧客-->
-                    <div class="col-md-6 col-lg-6">
+                    <div class="col-md-12 col-lg-6">
                         <div class="box box-primary box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title"><i class="fa fa-group margin-r-5"></i>顧客投資資產報酬率－依顧客</h3>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
+                             <select>
+                                <option selected="selected">D01001-吉林理1</option>
+                                <option>D01002-吉林理2</option>
+                                <option>D01011-吉林理主</option>
+                                 <option>D01101-吉林主</option>
+                            </select>
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr class=" bg-gray-light">
@@ -554,10 +585,10 @@
                                     <tbody>
                                         <tr>
                                             <td class="text-center">15%以上</td>
-                                            <td class="text-right">1</td>
-                                            <td class="text-right">135,872,244</td>
-                                            <td class="text-right">114,916,999,385</td>
-                                            <td class="text-right">114,784,093,672</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
                                         </tr>
                                         <tr>
                                             <td class="text-center">10%~15%</td>
@@ -575,13 +606,13 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">0%~5%</td>
-                                            <td class="text-right">2</td>
-                                            <td class="text-right">39,764,765</td>
-                                            <td class="text-right">397,465,327</td>
-                                            <td class="text-right">357,544,103</td>
+                                            <td class="text-right">3</td>
+                                            <td class="text-right">86,045,285 </td>
+                                            <td class="text-right">88,746,070 </td>
+                                            <td class="text-right">0</td>
                                         </tr>
                                         <tr>
-                                            <td class="text-center">0%~-5%</td>
+                                            <td class="text-center">-5%~0%</td>
                                             <td class="text-right">0</td>
                                             <td class="text-right">0</td>
                                             <td class="text-right">0</td>
@@ -589,10 +620,10 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">-10%~-5%</td>
-                                            <td class="text-right">1</td>
-                                            <td class="text-right">53,588,738</td>
-                                            <td class="text-right">57,847,221</td>
-                                            <td class="text-right">3,565,494</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
                                         </tr>
                                         <tr>
                                             <td class="text-center">-15%~-10%</td>
@@ -603,9 +634,9 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">-15%以上</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
+                                            <td class="text-right">2</td>
+                                            <td class="text-right">125,542,876 </td>
+                                            <td class="text-right">79,774,088 </td>
                                             <td class="text-right">0</td>
                                         </tr>
                                     </tbody>                                   
@@ -616,13 +647,19 @@
                     </div>
                     <!-- /.col -->
                     <!--顧客投資資產報酬率－依信託編號-->
-                    <div class="col-md-6 col-lg-6">
+                    <div class="col-md-12 col-lg-6">
                         <div class="box box-primary box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title"><i class="fa fa-group margin-r-5"></i>顧客投資資產報酬率－依信託編號</h3>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
+                             <select>
+                                <option selected="selected">D01001-吉林理1</option>
+                                <option>D01002-吉林理2</option>
+                                <option>D01011-吉林理主</option>
+                                 <option>D01101-吉林主</option>
+                            </select>
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <tr class=" bg-gray-light">
@@ -636,59 +673,59 @@
                                     <tbody>
                                         <tr>
                                             <td class="text-center">15%以上</td>
-                                            <td class="text-right">52</td>
-                                            <td class="text-right">57,372,880</td>
-                                            <td class="text-right">114,916,999,385</td>
-                                            <td class="text-right">114,784,093,672</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
                                         </tr>
                                         <tr>
                                             <td class="text-center">10%~15%</td>
-                                            <td class="text-right">1</td>
+                                            <td class="text-right">0</td>
                                             <td class="text-right">0</td>
                                             <td class="text-right">0</td>
                                             <td class="text-right">0</td>
                                         </tr>
                                         <tr>
                                             <td class="text-center">5%~10%</td>
-                                            <td class="text-right">8</td>
+                                            <td class="text-right">0</td>
                                             <td class="text-right">0</td>
                                             <td class="text-right">0</td>
                                             <td class="text-right">0</td>
                                         </tr>
                                         <tr>
                                             <td class="text-center">0%~5%</td>
-                                            <td class="text-right">687</td>
-                                            <td class="text-right">23,261,202</td>
-                                            <td class="text-right">31,905,344</td>
-                                            <td class="text-right">8,633,539</td>
+                                            <td class="text-right">35</td>
+                                            <td class="text-right">85,862,435</td>
+                                            <td class="text-right">99,695,556</td>
+                                            <td class="text-right">0</td>
                                         </tr>
                                         <tr>
-                                            <td class="text-center">0%~-5%</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
-                                            <td class="text-right">0</td>
+                                            <td class="text-center">-5%~0%</td>
+                                            <td class="text-right">64 </td>
+                                            <td class="text-right">125,725,726 </td>
+                                            <td class="text-right">68,824,602 </td>
                                             <td class="text-right">0</td>
                                         </tr>
                                         <tr>
                                             <td class="text-center">-10%~-5%</td>
-                                            <td class="text-right">9</td>
-                                            <td class="text-right">564,560</td>
-                                            <td class="text-right">548,673</td>
-                                            <td class="text-right">-45,343</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
                                         </tr>
                                         <tr>
                                             <td class="text-center">-15%~-10%</td>
-                                            <td class="text-right">2</td>
-                                            <td class="text-right">1,353,600</td>
-                                            <td class="text-right">1,227,598</td>
-                                            <td class="text-right">-156,082</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
                                         </tr>
                                         <tr>
                                             <td class="text-center">-15%以上</td>
-                                            <td class="text-right">169</td>
-                                            <td class="text-right">116,197,187</td>
-                                            <td class="text-right">16,254,264</td>
-                                            <td class="text-right">-100,657,322</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
+                                            <td class="text-right">0</td>
                                         </tr>
                                     </tbody>                                   
                                 </table>
@@ -697,8 +734,6 @@
                         <!-- /.box -->
                     </div>
                     <!-- /.col -->
-                </div>
-                <div class="row ">
                 </div>
             </section>
         </div>
@@ -757,148 +792,21 @@
     <!-- fusioncharts -->
     <script type="text/javascript" src="fusioncharts/js/fusioncharts.js"></script>
     <script type="text/javascript" src="fusioncharts/js/themes/fusioncharts.theme.fint.js"></script>
-    <!-- 顧客最新交易距今天數 -->
-    <script type="text/javascript">
-        FusionCharts.ready(function () {
-            var visitChart = new FusionCharts({
-                type: 'pie2d',
-                renderAt: 'pie1',
-                width: '100%',
-                height: '300',
-                dataFormat: 'json',
-                dataSource: {
-                    "chart": {
-                        //"caption": "Expenditures Incurred in Publishing a Book",
-                        "bgcolor": "FFFFFF",
-                        "showvalues": "1",
-                        "showpercentvalues": "1",
-                        "showLabels": "0",
-                        "showborder": "0",
-                        "showplotborder": "0",
-                        "showlegend": "1",
-                        "legendborder": "0",
-                        "legendposition": "right",
-                        "enablesmartlabels": "1",
-                        "use3dlighting": "0",
-                        "showshadow": "0",
-                        "legendbgcolor": "#CCCCCC",
-                        "legendbgalpha": "20",
-                        "legendborderalpha": "0",
-                        "legendshadow": "0",
-                        "legendnumcolumns": "1",
-                        "palettecolors": "#0085c3,#7ab800,#f2af00,#dc5034,#6e2585,#71c6c1,#ce1126"
-                    },
-                    "data": [
-                        {
-                            "label": "1個月以內",
-                            "value": "15"
-                        },
-                        {
-                            "label": "1-2個月",
-                            "value": "20"
-                        },
-                        {
-                            "label": "3-6個月",
-                            "value": "20"
-                        },
-                        {
-                            "label": "3-6個月",
-                            "value": "25"
-                        },
-                        {
-                            "label": "6-12個月",
-                            "value": "8"
-                        },
-                        {
-                            "label": "12個月以上",
-                            "value": "10"
-                        },
-                        {
-                            "label": "從未聯繫",
-                            "value": "2"
-                        }
-                    ]
-                }
-            }).render();
-        });
-    </script>
-    <!-- 顧客最新交易距今天數 -->
-    <script type="text/javascript">
-        FusionCharts.ready(function () {
-            var visitChart = new FusionCharts({
-                type: 'pie2d',
-                renderAt: 'pie2',
-                width: '100%',
-                height: '300',
-                dataFormat: 'json',
-                dataSource: {
-                    "chart": {
-                        //"caption": "Expenditures Incurred in Publishing a Book",
-                        "bgcolor": "FFFFFF",
-                        "showvalues": "1",
-                        "showpercentvalues": "1",
-                        "showLabels": "0",
-                        "showborder": "0",
-                        "showplotborder": "0",
-                        "showlegend": "1",
-                        "legendborder": "0",
-                        "legendposition": "right",
-                        "enablesmartlabels": "1",
-                        "use3dlighting": "0",
-                        "showshadow": "0",
-                        "legendbgcolor": "#CCCCCC",
-                        "legendbgalpha": "20",
-                        "legendborderalpha": "0",
-                        "legendshadow": "0",
-                        "legendnumcolumns": "1",
-                        "palettecolors": "#0085c3,#7ab800,#f2af00,#dc5034,#6e2585,#71c6c1,#ce1126"
-                    },
-                    "data": [
-                        {
-                            "label": "一個月以內",
-                            "value": "25"
-                        },
-                        {
-                            "label": "1-2個月",
-                            "value": "20"
-                        },
-                        {
-                            "label": "3-6個月",
-                            "value": "20"
-                        },
-                        {
-                            "label": "3-6個月",
-                            "value": "15"
-                        },
-                        {
-                            "label": "6-12個月",
-                            "value": "10"
-                        },
-                        {
-                            "label": "12個月以上",
-                            "value": "8"
-                        },
-                        {
-                            "label": "無理財交易",
-                            "value": "2"
-                        }
-                    ]
-                }
-            }).render();
-        });
-    </script>
-    <!-- 前30大顧客貢獻度- -->
+    <!-- 理財滲透率- -->
     <script>
         FusionCharts.ready(function () {
             var revenueChart = new FusionCharts({
-                type: 'msbar2d',
-                renderAt: 'chart3',
+                type: 'column2d',
+                renderAt: 'chart1',
                 width: '100%',
                 height: '300',
                 dataFormat: 'json',
                 dataSource: {
                     "chart": {
                         //"caption": "Business Results: 2005",
+                        //"captionFontSize": "14",
+                        //"subcaptionFontSize": "14",
+                        //"subcaptionFontBold": "0",
                         //"yaxisname": "Revenue (Millions)",
                         //"divlinedashlen": "1",
                         //"divlinedashgap": "2",
@@ -917,16 +825,259 @@
                         "axisLineAlpha": "25",
                         "divLineAlpha": "10",
                         "alignCaptionWithCanvas": "0",
-                        "showAlternateVGridColor": "0",
+                        "showAlternateVGridColor": "0"
+                    },
+                    "data": [
+                        {
+                            "label": "吉林理1",
+                            "value": "1%"
+                        },
+                        {
+                            "label": "吉林理2",
+                            "value": "1%"
+                        },
+                        {
+                            "label": "吉林理主",
+                            "value": "0"
+                        },
+                        {
+                            "label": "吉林主",
+                            "value": "0"
+                        }
+                    ],
+                }
+            }).render();
+        });
+    </script>
+    <!-- 客戶最新交易距今天數 -->
+    <script type="text/javascript">
+        FusionCharts.ready(function () {
+            var visitChart = new FusionCharts({
+                type: 'mscolumn2d',
+                renderAt: 'chart2',
+                width: '100%',
+                height: '300',
+                dataFormat: 'json',
+                dataSource: {
+                    "chart": {
+                        //"caption": "Business Results: 2005",
                         //"captionFontSize": "14",
                         //"subcaptionFontSize": "14",
                         //"subcaptionFontBold": "0",
-                        "toolTipColor": "#ffffff",
-                        "toolTipBorderThickness": "0",
-                        "toolTipBgColor": "#000000",
-                        "toolTipBgAlpha": "80",
-                        "toolTipBorderRadius": "2",
-                        "toolTipPadding": "5"
+                        //"yaxisname": "Revenue (Millions)",
+                        //"divlinedashlen": "1",
+                        //"divlinedashgap": "2",
+                        //"numberprefix": "$",
+                       // "numbersuffix": "%",
+                        "chartrightmargin": "30",
+                        "paletteColors": "#0075c2",
+                        "bgColor": "#ffffff",
+                        "showBorder": "0",
+                        "showCanvasBorder": "0",
+                        "usePlotGradientColor": "0",
+                        "plotBorderAlpha": "10",
+                        "placeValuesInside": "1",
+                        "valueFontColor": "#ffffff",
+                        "showAxisLines": "1",
+                        "axisLineAlpha": "25",
+                        "divLineAlpha": "10",
+                        "alignCaptionWithCanvas": "0",
+                        "showAlternateVGridColor": "0",
+                        "palettecolors": "#0085c3,#7ab800,#f2af00,#dc5034,#6e2585,#71c6c1,#ce1126"
+                    },
+            "categories": [
+                {
+                    "category": [
+                        { "label": "一個月以內" }, 
+                        { "label": "1-3個月 (30天)" }, 
+                        { "label": "3-6個月 (31-90天)" }, 
+                        { "label": "6-12個月 (91-180天)" }, 
+                        { "label": "12個月以上 (361天以上)" }, 
+                        { "label": "無理財交易" }
+                    ]
+                }
+            ],
+            "dataset": [
+                {
+                    "seriesname": "吉林理1",
+                    "data": [
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "5" }, 
+                        { "value": "6" }
+                    ]
+                }, 
+                {
+                    "seriesname": "吉林理2",
+                    "data": [
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "1" }, 
+                        { "value": "0" }
+                    ]
+                }, 
+                {
+                    "seriesname": "吉林理主",
+                    "data": [
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }
+                    ]
+                }, {
+                    "seriesname": "吉林主",
+                    "data": [
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }
+                    ]
+                }
+            ]
+                }
+            }).render();
+        });
+    </script>
+    <!-- 客戶最新訪談紀錄距今天數-->
+    <script type="text/javascript">
+        FusionCharts.ready(function () {
+            var visitChart = new FusionCharts({
+                type: 'mscolumn2d',
+                renderAt: 'chart3',
+                width: '100%',
+                height: '300',
+                dataFormat: 'json',
+                dataSource: {
+                    "chart": {
+                        //"caption": "Business Results: 2005",
+                        //"captionFontSize": "14",
+                        //"subcaptionFontSize": "14",
+                        //"subcaptionFontBold": "0",
+                        //"yaxisname": "Revenue (Millions)",
+                        //"divlinedashlen": "1",
+                        //"divlinedashgap": "2",
+                        //"numberprefix": "$",
+                       // "numbersuffix": "%",
+                        "chartrightmargin": "30",
+                        "paletteColors": "#0075c2",
+                        "bgColor": "#ffffff",
+                        "showBorder": "0",
+                        "showCanvasBorder": "0",
+                        "usePlotGradientColor": "0",
+                        "plotBorderAlpha": "10",
+                        "placeValuesInside": "1",
+                        "valueFontColor": "#ffffff",
+                        "showAxisLines": "1",
+                        "axisLineAlpha": "25",
+                        "divLineAlpha": "10",
+                        "alignCaptionWithCanvas": "0",
+                        "showAlternateVGridColor": "0",
+                        "palettecolors": "#0085c3,#7ab800,#f2af00,#dc5034,#6e2585,#71c6c1,#ce1126"
+                    },
+            "categories": [
+                {
+                    "category": [
+                        { "label": "一個月以內" }, 
+                        { "label": "1-3個月 (30天)" }, 
+                        { "label": "3-6個月 (31-90天)" }, 
+                        { "label": "6-12個月 (91-180天)" }, 
+                        { "label": "12個月以上 (361天以上)" }, 
+                        { "label": "從未聯繫" }
+                    ]
+                }
+            ],
+            "dataset": [
+                {
+                    "seriesname": "吉林理1",
+                    "data": [
+                        { "value": "3" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "8" }
+                    ]
+                }, 
+                {
+                    "seriesname": "吉林理2",
+                    "data": [
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "1" }
+                    ]
+                }, 
+                {
+                    "seriesname": "吉林理主",
+                    "data": [
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }
+                    ]
+                }, {
+                    "seriesname": "吉林主",
+                    "data": [
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }, 
+                        { "value": "0" }
+                    ]
+                }
+            ]
+                }
+            }).render();
+        });
+    </script>
+    <!-- 前３０大客戶貢獻度佔比- -->
+    <script>
+        FusionCharts.ready(function () {
+            var revenueChart = new FusionCharts({
+                type: 'mscolumn2d',
+                renderAt: 'chart4',
+                width: '100%',
+                height: '300',
+                dataFormat: 'json',
+                dataSource: {
+                    "chart": {
+                        //"caption": "Business Results: 2005",
+                        //"captionFontSize": "14",
+                        //"subcaptionFontSize": "14",
+                        //"subcaptionFontBold": "0",
+                        //"yaxisname": "Revenue (Millions)",
+                        //"divlinedashlen": "1",
+                        //"divlinedashgap": "2",
+                        //"numberprefix": "$",
+                       // "numbersuffix": "%",
+                        "chartrightmargin": "30",
+                        "paletteColors": "#0075c2",
+                        "bgColor": "#ffffff",
+                        "showBorder": "0",
+                        "showCanvasBorder": "0",
+                        "usePlotGradientColor": "0",
+                        "plotBorderAlpha": "10",
+                        "placeValuesInside": "1",
+                        "valueFontColor": "#ffffff",
+                        "showAxisLines": "1",
+                        "axisLineAlpha": "25",
+                        "divLineAlpha": "10",
+                        "alignCaptionWithCanvas": "0",
+                        "showAlternateVGridColor": "0",
+                        "palettecolors": "#0085c3,#7ab800,#f2af00,#dc5034,#6e2585,#71c6c1,#ce1126"
                     },
                     "categories": [
                         {
@@ -945,35 +1096,268 @@
                                 },
                                 {
                                     "label": "前30大"
+                                },
+                                {
+                                    "label": "總客戶"
                                 }
                             ]
                         }
                     ],
                     "dataset": [
                         {
-                            // "seriesname": "AUM",
-                            //"color": "607142"
+                             "seriesname": "吉林理1",
                             "data": [
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"} 
+                            ]
+                        },
+                        {
+                             "seriesname": "吉林理2",
+                            "data": [
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"} 
+                            ]
+                        },
+                        {
+                             "seriesname": "吉林理主",
+                            "data": [
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"} 
+                            ]
+                        },
+                        {
+                             "seriesname": "吉林主",
+                            "data": [
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"},
+                                {"value": "0%"} 
+                            ]
+                        }
+                    ],
+                }
+            }).render();
+        });
+    </script>
+    <!-- AUM級距v.s貢獻度佔比- -->
+    <script>
+        FusionCharts.ready(function () {
+            var revenueChart = new FusionCharts({
+                type: 'mscolumn2d',
+                renderAt: 'chart5',
+                width: '100%',
+                height: '300',
+                dataFormat: 'json',
+                dataSource: {
+                    "chart": {
+                        //"caption": "Business Results: 2005",
+                        //"captionFontSize": "14",
+                        //"subcaptionFontSize": "14",
+                        //"subcaptionFontBold": "0",
+                        //"yaxisname": "Revenue (Millions)",
+                        //"divlinedashlen": "1",
+                        //"divlinedashgap": "2",
+                        //"numberprefix": "$",
+                         "numbersuffix": "%",
+                        "chartrightmargin": "30",
+                        "paletteColors": "#0075c2",
+                        "bgColor": "#ffffff",
+                        "showBorder": "0",
+                        "showCanvasBorder": "0",
+                        "usePlotGradientColor": "0",
+                        "plotBorderAlpha": "10",
+                        "placeValuesInside": "1",
+                        "valueFontColor": "#ffffff",
+                        "showAxisLines": "1",
+                        "axisLineAlpha": "25",
+                        "divLineAlpha": "10",
+                        "alignCaptionWithCanvas": "0",
+                        "showAlternateVGridColor": "0",
+                        "palettecolors": "#0085c3,#7ab800,#f2af00,#dc5034,#6e2585,#71c6c1,#ce1126"
+                    },
+                    "categories": [
+                        {
+                            "category": [
                                 {
-                                    "value": "20%",
-                                    "color": "6e2585"
+                                    "label": "3000萬以上"
                                 },
                                 {
-                                    "value": "55%",
-                                    "color": "ce1126"
+                                    "label": "1000-3000萬"
                                 },
                                 {
-                                    "value": "60%",
-                                    "color": "f2af00"
+                                    "label": "300-1000萬"
                                 },
                                 {
-                                    "value": "75%",
-                                    "color": "71c6c1"
+                                    "label": "100-300萬"
                                 },
                                 {
-                                    "value": "80%",
-                                    "color": "0085c3"
+                                    "label": "100萬以下"
                                 }
+                            ]
+                        }
+                    ],
+                    "dataset": [
+                        {
+                            "seriesname": "吉林理1",
+                            "data": [
+                                { "value": "0%" },
+                                { "value": "0%" },
+                                { "value": "0.3%" },
+                                { "value": "0.5%" },
+                                { "value": "1%" }
+                            ]
+                        },
+                        {
+                            "seriesname": "吉林理2",
+                            "data": [
+                                { "value": "0%" },
+                                { "value": "0%" },
+                                { "value": "0%" },
+                                { "value": "0%" },
+                                { "value": "1.6%" }
+                            ]
+                        },
+                        {
+                            "seriesname": "吉林理主",
+                            "data": [
+                                { "value": "0%" },
+                                { "value": "0%" },
+                                { "value": "0%" },
+                                { "value": "0%" },
+                                { "value": "0%" }
+                            ]
+                        },
+                        {
+                            "seriesname": "吉林主",
+                            "data": [
+                                { "value": "0%" },
+                                { "value": "0%" },
+                                { "value": "0%" },
+                                { "value": "0%" },
+                                { "value": "0%" }
+                            ]
+                        }
+                    ],
+                }
+            }).render();
+        });
+    </script>
+    <!-- 前50大客戶資產序時變化- -->
+    <script>
+        FusionCharts.ready(function () {
+            var revenueChart = new FusionCharts({
+                type: 'msline',
+                renderAt: 'chart6',
+                width: '100%',
+                height: '300',
+                dataFormat: 'json',
+                dataSource: {
+                    "chart": {
+                        //"caption": "Business Results: 2005",
+                        //"captionFontSize": "14",
+                        //"subcaptionFontSize": "14",
+                        //"subcaptionFontBold": "0",
+                        //"yaxisname": "Revenue (Millions)",
+                        //"divlinedashlen": "1",
+                        //"divlinedashgap": "2",
+                        //"numberprefix": "$",
+                        "numbersuffix": "M",
+                        "chartrightmargin": "30",
+                        "paletteColors": "#0075c2",
+                        "bgColor": "#ffffff",
+                        "showBorder": "0",
+                        "showCanvasBorder": "0",
+                        "usePlotGradientColor": "0",
+                        "plotBorderAlpha": "10",
+                        "placeValuesInside": "1",
+                        "valueFontColor": "#ffffff",
+                        "showAxisLines": "1",
+                        "axisLineAlpha": "25",
+                        "divLineAlpha": "10",
+                        "alignCaptionWithCanvas": "0",
+                        "showAlternateVGridColor": "0",
+                        "palettecolors": "#0085c3,#7ab800,#f2af00,#dc5034,#6e2585,#71c6c1,#ce1126"
+                    },
+                    "categories": [
+                        {
+                            "category": [
+                                {
+                                    "label": "2016/01"
+                                },
+                                {
+                                    "label": "2015/12"
+                                },
+                                {
+                                    "label": "2015/11"
+                                },
+                                {
+                                    "label": "2015/10"
+                                },
+                                {
+                                    "label": "2015/09"
+                                },
+                                {
+                                    "label": "2015/08"
+                                }
+                            ]
+                        }
+                    ],
+                    "dataset": [
+                        {
+                            "seriesname": "吉林理1",
+                            "data": [
+                                { "value": "101" },
+                                { "value": "0" },
+                                { "value": "0" },
+                                { "value": "0" },
+                                { "value": "0" }
+                            ]
+                        },
+                        {
+                            "seriesname": "吉林理2",
+                            "data": [
+                                { "value": "92" },
+                                { "value": "0" },
+                                { "value": "0" },
+                                { "value": "0" },
+                                { "value": "0" },
+                                { "value": "0" }
+                            ]
+                        },
+                        {
+                            "seriesname": "吉林理主",
+                            "data": [
+                                { "value": "0" },
+                                { "value": "0" },
+                                { "value": "0" },
+                                { "value": "0" },
+                                { "value": "0" },
+                                { "value": "0" }
+                            ]
+                        },
+                        {
+                            "seriesname": "吉林主",
+                            "data": [
+                                { "value": "0" },
+                                { "value": "0" },
+                                { "value": "0" },
+                                { "value": "0" },
+                                { "value": "0" },
+                                { "value": "0" }
                             ]
                         }
                     ],
