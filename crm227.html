@@ -34,7 +34,7 @@
     <!-- Date Picker -->
     <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
     <!-- fullCalendar 2.2.5-->
@@ -79,7 +79,7 @@
         }
         td
         {
-            word-break: break-all;  /*數字依照版面換行*/
+           /* word-break: break-all;  數字依照版面換行*/
         }
     </style>
 </head>
@@ -267,14 +267,29 @@
                     <li>
                         <a href="index.html"><i class="menu-icon fa fa-home"></i><span class="mm-text">首頁</span></a>
                     </li>
+                    <li  class="active">
+                        <a href="index1.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">主管儀表板</span></a>
+                    </li>
                     <li>
-                        <a href="index2.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">儀表板</span></a>
+                        <a href="index2.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">理專儀表板</span></a>
                     </li>
                     <li>
                         <a href="index3.html"><i class="menu-icon fa fa-line-chart"></i><span class="mm-text">金融行情</span></a>
                     </li>
-
-                    <li class="mm-dropdown active">
+                    <li class="mm-dropdown">
+                        <a href="#"><i class="menu-icon fa fa-diamond"></i><span class="mm-text">客戶管理</span></a>
+                        <ul>
+                            <li class="hidden"><a tabindex="-1" href="crm21.html"><span class="mm-text">基本資料</span></a></li>
+                            <li class="active"><a tabindex="-1" href="crm22.html"><span class="mm-text">客戶資訊</span></a></li>
+                            <li><a tabindex="-1" href="crm23.html"><span class="mm-text">財富資料</span></a></li>
+                            <li><a tabindex="-1" href="crm24.html"><span class="mm-text">資產結構</span></a></li>
+                            <li><a tabindex="-1" href="crm25.html"><span class="mm-text">交易紀錄查詢</span></a></li>
+                            <li><a tabindex="-1" href="crm26.html"><span class="mm-text">已贖回損益查詢</span></a></li>
+                            <li><a tabindex="-1" href="crm27.html"><span class="mm-text">訪談紀錄</span></a></li>
+                            <li><a tabindex="-1" href="crm28.html"><span class="mm-text">KYC相關</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="mm-dropdown">
                         <a href="#"><i class="menu-icon fa fa-th"></i><span class="mm-text">客戶財富資料</span></a>
                         <ul>
                             <li><a tabindex="-1" href="crm01.html"><span class="mm-text">存摺、貸款</span></a></li>
@@ -282,7 +297,7 @@
                             <li><a tabindex="-1" href="crm03.html"><span class="mm-text">在途投資明細</span></a></li>
                             <li><a tabindex="-1" href="crm04.html"><span class="mm-text">保險</span></a></li>
                             <li><a tabindex="-1" href="crm05.html"><span class="mm-text">黃金存摺</span></a></li>
-                            <li class="active"><a tabindex="-1" href="crm06.html"><span class="mm-text">組合式產品</span></a></li>
+                            <li><a tabindex="-1" href="crm06.html"><span class="mm-text">組合式產品</span></a></li>
                             <li><a tabindex="-1" href="crm07.html"><span class="mm-text">票債券</span></a></li>
                             <li><a tabindex="-1" href="crm08.html"><span class="mm-text">信用卡</span></a></li>
                             <li><a tabindex="-1" href="crm09.html"><span class="mm-text">證券</span></a></li>
@@ -348,167 +363,185 @@
                             <button class=" btn btn-primary"><i class="fa fa-cart-arrow-down margin-r-5"></i>快速下單</button>
                         </div>
                     </div>
-                    <div class="col-md-12 text-center">
-                        <a href="crm01.html" class="btn btn-app btn-primary  btn-lg  " >
-                            <i class="glyphicon glyphicon-piggy-bank"></i><span>存/貸款</span>
-                        </a>
-                        <a href="crm02.html" class="btn btn-app btn-primary btn-lg">
-                            <i class="fa  fa-pie-chart"></i>基/債/ETF
-                        </a>
-                        <a href="crm03.html" class="btn btn-app btn-primary btn-lg">
-                            <i class="fa fa-truck"></i>在途
-                        </a>
-                        <a href="crm04.html" class="btn btn-app btn-primary btn-lg" >
-                            <i class="fa fa-umbrella"></i>保險
-                        </a>
-                        <a href="crm05.html" class="btn btn-app btn-primary btn-lg" >
-                            <i class="glyphicon glyphicon-hdd"></i>黃金存摺
-                        </a>
-                        <a href="crm06.html" class="btn btn-app btn-primary btn-lg active" style="color: #f7ba9b;"  >
-                            <i class="	fa fa-cubes"></i>組合式產品
-                        </a>
-                        <a href="crm07.html" class="btn btn-app btn-primary btn-lg" >
-                            <i class="fa fa-money"></i>票債券
-                        </a>
-                        <a href="crm08.html" class="btn btn-app btn-primary btn-lg" >
-                            <i class="fa fa-credit-card"></i>信用卡
-                        </a>
-                        <a href="crm09.html" class="btn btn-app btn-primary btn-lg">
-                            <i class="fa fa-line-chart"></i>證券
-                        </a>
-                        <a href="crm10.html" class="btn btn-app btn-primary btn-lg">
-                            <i class="fa fa-envelope"></i>Mail
-                        </a>
-                    </div>
                 </div>
             </div>
             <!-- / .page-header -->
             <!-- Main content -->
             <section class="content">
-                <div class="row">
-                    <div class="panel">
-                        <!-- .panel-header -->
-                        <div class="panel-heading">
-                            <span class="panel-title"><i class="fa fa-sitemap margin-r-5"></i>關係戶：</span>
-                            <select class="select2" style="width: 120px;">
-                                <option selected="selected">本人</option>
-                            </select>
-                        </div>
-                        <!-- / .panel-header -->
-                        <div class="panel-body">
-                            <div class="panel-group panel-group-dark-gray" id="accordion-example">
-                                <!-- 組合式產品雙元貨幣 -->
-                                <div class="panel">
-                                    <div class="panel-heading" style="font-size: 16px;">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-example" href="#collapse1">組合式產品雙元貨幣
-                                        </a>
-                                    </div>
-                                    <!-- / .panel-heading -->
-                                    <div id="collapse1" class="panel-collapse in">
-                                        <div class="panel-body">
-                                            <table class="table table-bordered table-hover no-margin-b">
-                                                <thead>
-                                                    <tr class=" bg-gray-light">
-                                                        <th class="text-center no-padding-hr">產品名稱</th>
-                                                        <th class="text-center no-padding-hr">交易序號</th>
-                                                        <th class="text-center no-padding-hr">投資幣別</th>
-                                                        <th class="text-center no-padding-hr">相對幣別</th>
-                                                        <th class="text-center no-padding-hr">投資金額</th>
-                                                        <th class="text-center no-padding-hr">交易日<br />比價日</th>
-                                                        <th class="text-center no-padding-hr">起存日<br />到期日</th>
-                                                        <th class="text-center no-padding-hr">轉換匯率</th>
-                                                        <th class="text-center no-padding-hr">稅前產品息</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>加幣本金連結美元雙元貨幣組合式商品</td>
-                                                        <td class="text-center no-padding-hr">DC1311_015</td>
-                                                        <td class="text-center no-padding-hr">CAD</td>
-                                                        <td class="text-center no-padding-hr">USD</td>
-                                                        <td class="text-right">56,217.74</td>
-                                                        <td class="text-center no-padding-hr">2015/11/27<br />2015/12/30</td>
-                                                        <td class="text-center no-padding-hr">2015/11/27<br />2015/12/30</td>
-                                                        <td class="text-right">1.0488</td>
-                                                        <td class="text-right">3.50%</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>人民幣本金連結美元雙元貨幣組合式商品</td>
-                                                        <td class="text-center no-padding-hr">STD1D02351</td>
-                                                        <td class="text-center no-padding-hr">CNY</td>
-                                                        <td class="text-center no-padding-hr">USD</td>
-                                                        <td class="text-right">200,000</td>
-                                                        <td class="text-center no-padding-hr">2015/10/21<br />2015/10/21</td>
-                                                        <td class="text-center no-padding-hr">2015/11/27<br />2015/12/30</td>
-                                                        <td class="text-right">6.0908</td>
-                                                        <td class="text-right">0.50%</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <!-- / .panel-body -->
-                                    </div>
-                                    <!-- / .collapse -->
+                <div class="row ">
+                    <div class="col-sm-12">
+                        <div class="panel-group panel-group-dark-gray" id="accordion-example">
+                            <div class="panel">
+                                <div class="panel-heading" style="font-size: 16px;">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-example" href="#collapse1">訪談紀錄
+                                    </a>
                                 </div>
-                                <!-- / .panel -->
-                                <!-- 組合式產品非雙元貨幣 -->
-                                <div class="panel">
-                                    <div class="panel-heading" style="font-size: 16px;">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-example" href="#collapse2">組合式產品非雙元貨幣</a>
+                                <!-- / .panel-heading -->
+                                <div id="collapse1" class="panel-collapse in">
+                                    <div class="panel-body" style="padding-bottom:0;">
+                                        <form class="form-horizontal" id="jq-validation-form">
+                                            <div class="col-sm-6 col-lg-3 form-group no-margin-hr">
+                                                <label class="control-label text-danger">訪談日期</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" name="daterange" style="width:200px;" required="required" >
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6 col-lg-4 form-group no-margin-hr">
+                                                <label class="control-label">訪談內容</label>
+                                                <input type="text" class="form-control" >
+                                            </div>
+                                            <div class="col-sm-3 col-lg-2 form-group no-margin-hr">
+                                                <label class="control-label">客戶姓名</label>
+                                                <input type="text" name="name" value="陳Ｏ成" class="form-control" style="width:150px;">
+                                            </div>
+                                            <div class="col-sm-3 col-lg-2 form-group no-margin-hr ">
+                                                <label class="control-label">客戶身分證號</label>
+                                                <input type="text" name="id" value="A123456789" class="form-control"　style="width:150px;">
+                                            </div>
+                                            <div class="col-sm-3 col-lg-2 form-group no-margin-hr">
+                                                <label class="control-label">追蹤名單</label>
+                                                <select class="select2 form-control select2-drop-auto-width" autofocus>
+                                                    <option value="*">全部</option>
+                                                    <option value="1">是</option>
+                                                    <option value="2">否</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-3 col-lg-2 form-group no-margin-hr">
+                                                <label class="control-label">追蹤期限</label>
+                                                <select class="select2 form-control select2-drop-auto-width" autofocus>
+                                                    <option value="*">全部</option>
+                                                    <option value="1">過期</option>
+                                                    <option value="2">有效</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-sm-12 form-group">
+                                                <button type="submit" class="btn btn-primary">搜尋</button>
+                                                <button type="submit" class="btn btn-primary">新增</button>
+                                            </div>
+                                        </form>
                                     </div>
-                                    <!-- / .panel-heading -->
-                                    <div id="collapse2" class="panel-collapse in">
-                                        <div class="panel-body">
-                                            <table class="table table-bordered table-hover no-margin-b">
-                                                <thead>
-                                                    <tr class=" bg-gray-light">
-                                                        <th class="text-center no-padding-hr">產品名稱</th>
-                                                        <th class="text-center no-padding-hr">交易序號</th>
-                                                        <th class="text-center no-padding-hr">投資幣別</th>
-                                                        <th class="text-center no-padding-hr">投資標的</th>
-                                                        <th class="text-center no-padding-hr">投資金額</th>
-                                                        <th class="text-center no-padding-hr">交易日<br />最後比價日</th>
-                                                        <th class="text-center no-padding-hr">起存日<br />到期日</th>
-                                                        <th class="text-center no-padding-hr">參考產品息</th>
-                                                        <th class="text-center no-padding-hr">保本率</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>無資料</td>
-                                                        <td class="text-center no-padding-hr"></td>
-                                                        <td class="text-center no-padding-hr"></td>
-                                                        <td ></td>
-                                                        <td class="text-right"></td>
-                                                        <td class="text-center no-padding-hr"><br /></td>
-                                                        <td class="text-center no-padding-hr"><br /></td>
-                                                        <td class="text-right"></td>
-                                                        <td class="text-right"></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <!-- / .panel-body -->
-                                    </div>
-                                    <!-- / .collapse -->
+                                    <!-- / .panel-body -->
                                 </div>
-                                <!-- / .panel -->
+                                <!-- / .collapse -->
+                                <div class="panel-body table-responsive">
+                                    <table id="table1" class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr class=" bg-gray-light">
+                                                <th class="text-center no-padding-hr">SN</th>
+                                                <th class="text-center no-padding-hr">操作</th>
+                                                <th class="text-center">訪談日期</th>
+                                                <th class="text-center">客戶姓名</th>
+                                                <th class="text-center">所屬理專</th>
+                                                <th class="text-center">訪談理專</th>
+                                                <th class="text-center">訪談結果</th>
+                                                <th class="text-center">覆核主管</th>
+                                                <th class="text-center">訪談內容</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-right">1</td>
+                                                <td></td>        
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td style="word-break: break-all">顧客無意願 - 申請/作業手續麻煩</td>
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="text-right">2</td>
+                                                <td></td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td style="word-break: break-all">顧客有意願 - 完成銷售/任務(關懷,滿意度調查..),不需轉介</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">3</td>
+                                                <td></td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td style="word-break: break-all">顧客有意願 - 完成銷售，需轉介</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">4</td>
+                                                <td></td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td>完成轉換</td>
+                                                <td></td>
+                                                <td style="word-break: break-all">既有客戶保險</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">5</td>
+                                                <td></td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td>成交</td>
+                                                <td></td>
+                                                <td style="word-break: break-all">既有客戶一般性拜訪基金未成交理由</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">6</td>
+                                                <td></td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td>完成通知 </td>
+                                                <td></td>
+                                                <td style="word-break: break-all">通知"創利全球焦"贖回金額:NTD 136,679</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">7</td>
+                                                <td></td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td>考慮中</td>
+                                                <td></td>
+                                                <td style="word-break: break-all">轉介(轉介行員)市場分析手收</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-right">8</td>
+                                                <td></td>
+                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                                <td>客戶姓名</td>
+                                                <td>吉林理1 </td>
+                                                <td>吉林理1 </td>
+                                                <td>考慮中</td>
+                                                <td></td>
+                                                <td style="word-break: break-all">既有客戶市場分析黃金存摺一般性拜訪</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-                            <!-- / .panel-group -->
-                        </div>
-                        <div class="panel-footer comment-footer">
-                            <h4>【注意】</h4>
-                            <ol style="font-size: 15px;">
-                                <li>資料日期：2015/12/31</li>
-                                <li>以上資料均以本行帳記載為主，本資料僅供參考。</li>
-                                <li>理財專員陳ＯＯ於2016/01/02 9:00 查詢。</li>
-                            </ol>
+                            <!-- / .panel -->
                         </div>
                     </div>
-                </div>
+                    </div>
             </section>
         <!-- / #content-wrapper -->
         <div id="main-menu-bg"></div>
+        </div>
     </div>
     <!-- / #main-wrapper -->
     <!-- Get jQuery from Google CDN -->
@@ -558,42 +591,155 @@
             $clock.countdown(gettimeFromNow());
         });
     </script>
+        <!-- date-range-picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <script>
+        $(function () {
+            //Date range picker
+            $('input[name="daterange"]').daterangepicker(
+                {
+                    singleDatePicker: false,
+                    showDropdowns: true,
+                    showWeekNumbers: false,
+                    timePicker: false,
+                    timePicker24Hour: false,
+                    timePickerSeconds: false,
+                    autoApply: true,
+                    opens: 'center',
+                    buttonClasses: ['btn btn-default'],
+                    applyClass: 'btn-small btn-primary',
+                    cancelClass: 'btn-small',
+                    firstDay: 1,
+                    separator: " - ",
+                    // 預設查最近7天
+                    startDate: moment().subtract('days', 6),
+                    endDate: moment(),
+                    // 最大日放在後7天，查預約交易
+                    maxDate:moment().add('days', 7),
+                    // 最多查5年內的資料
+                    minDate: moment().subtract('years', 5),
+                    // 資料範圍30天
+                    dateLimit: {
+                        "days": 30
+                    },
+                    ranges: {
+                        '今天': [moment(), moment()],
+                        '昨天': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                        '最近7天': [moment().subtract('days', 6), moment()],
+                        '最近30天': [moment().subtract('days', 29), moment()],
+                        '本月': [moment().startOf('month'), moment().endOf('month')],
+                        '上個月': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+                    },
+                    locale: {
+                        format: "YYYY/MM/DD",
+                        applyLabel: '<i class="glyphicon glyphicon-ok"></i>',
+                        cancelLabel: '<i class="glyphicon glyphicon-remove"></i>',
+                        fromLabel: '起',
+                        toLabel: '訖',
+                        customRangeLabel: '自訂範圍',
+                        daysOfWeek: ['日','一','二','三','四','五','六'],
+                        monthNames: ['1 月','2 月','3 月','4 月','5 月','6 月','7 月','8 月','9 月','10 月','11 月','12 月'],
+                    }
+                });
+        });
+    </script>
     <!-- DataTables -->
     <script src="plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
     <script>
         $(function () {
             $('#table1').DataTable({
-                "oLanguage": {
-                    "oPaginate": {
-                        "sPrevious": "<",
-                        "sNext": ">"
+                'destroy': true,
+                'paging': true,
+                'info': true,
+                'searching': false,
+                'ordering': true,
+                "order": [[ 2, "desc" ]],  // 預設排序
+                'orderMulti': false,
+                'autoWidth': false,
+                'pageLength': 5,
+                'lengthMenu': [[5, 10, 25, 50, -1], [5, 10, 25, 50, "全部"]],
+                'processing': true,
+                'pagingType': 'full_numbers',
+                'decimal': ",",                
+                'language': {
+                    "processing":   "處理中...",
+                    "loadingRecords": "載入中...",
+                    "lengthMenu":   "一頁顯示 _MENU_ 筆資料",
+                    "zeroRecords":  "沒有符合的結果",
+                    "info":         "顯示第 _START_ 至 _END_ 筆資料，共 _TOTAL_ 筆",
+                    "infoEmpty":    "顯示第 0 至 0 筆資料，共 0 筆",
+                    "infoFiltered": "(從 _MAX_ 筆資料中過濾)",
+                    "infoPostFix":  "",
+                    "search":       "搜尋:",
+                    "url":          "",
+                    "paginate": {
+                            'first': '<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>',
+                            'last': '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>',
+                            'previous': '<i class="fa fa-chevron-left"></i>',
+                            'next': '<i class="fa fa-chevron-right"></i>'
+                    },
+                    "Aria": {
+                        "sortAscending":  ": 小 ->大排列",
+                        "sortDescending": ": 大->小 排列"
                     }
                 },
-                "paging": true,
-                "pageLength": 5,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": false,
-                "info": false,
-                "autoWidth": false
-            });
-            $('#table2').DataTable({
-                "oLanguage": {
-                    "oPaginate": {
-                        "sPrevious": "<",
-                        "sNext": ">"
-                    }
-                },
-                "paging": true,
-                "pageLength": 5,
-                "lengthChange": false,
-                "searching": false,
-                "ordering": false,
-                "info": false,
-                "autoWidth": false
+                "columnDefs": [
+                  { "orderable": false, "targets": [0,1,8] }
+                ]
             });
         });
     </script>
+    <!-- Bootstrap Datepicker-->
+    <script>
+        init.push(function () {
+            var options = {
+                todayBtn: "linked",
+                orientation: $('body').hasClass('right-to-left') ? "auto right" : 'auto auto'
+            }
+            $('#bs-datepicker-example').datepicker(options);
+
+            $('#bs-datepicker-component').datepicker();
+
+            var options2 = {
+                orientation: $('body').hasClass('right-to-left') ? "auto right" : 'auto auto'
+            }
+            $('#bs-datepicker-range').datepicker(options2);
+
+            $('#bs-datepicker-inline').datepicker();
+        });
+    </script>
+    <!-- / Bootstrap Datepicker -->
+    <!--	jQuery Validation -->
+    <script>
+        init.push(function () {
+            // Setup validation
+            $("#jq-validation-form").validate({
+                ignore: '.ignore, .select2-input',
+                focusInvalid: false,
+                rules: {
+                    'jq-validation-required': {
+                        required: true
+                    },
+                    'jq-validation-select1': {
+                        required: true
+                    },
+                    'jq-validation-select2': {
+                        required: true
+                    },
+                    'jq-validation-text': {
+                        required: true
+                    }
+                },
+                messages: {
+                    'jq-validation-required': '不可為空白',
+                    'jq-validation-select1': '請選擇',
+                    'jq-validation-select2': '請選擇'
+                }
+            });
+        });
+    </script>
+    <!-- / Javascript -->
 </body>
 </html>
