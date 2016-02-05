@@ -355,9 +355,8 @@
                             <label>A123456789</label>
                         </div>
                         <div class="col-md-5 col-lg-5 btn-group  no-padding-hr">
-                            <button class="btn btn-primary">全覽</button>
-                            <button class="btn btn-primary">風險控管</button>
-                            <button class="btn btn-primary">新增訪談</button>
+                            <a href="crm22.html" class="btn btn-primary" role="button">全覽</a>
+                            <a href="crm227.html" class="btn btn-primary" role="button">新增訪談</a>
                         </div>
                         <div class="col-md-2  no-padding-hr">
                             <button class=" btn btn-primary"><i class="fa fa-cart-arrow-down margin-r-5"></i>快速下單</button>
@@ -368,17 +367,16 @@
             <!-- / .page-header -->
             <!-- Main content -->
             <section class="content">
-                <div class="row ">
+                <div class="row">
                     <div class="col-sm-12">
-                        <div class="panel-group panel-group-dark-gray" id="accordion-example">
-                            <div class="panel">
-                                <div class="panel-heading" style="font-size: 16px;">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-example" href="#collapse1">訪談紀錄
-                                    </a>
+                        <div class="panel-group no-margin-b" id="accordion-example">
+                            <div class="panel panel-dark-gray">
+                                <div class="panel-heading" >
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-example" href="#collapse1" style="font-size: 16px; color:white;">訪談紀錄</a>
                                 </div>
                                 <!-- / .panel-heading -->
                                 <div id="collapse1" class="panel-collapse in">
-                                    <div class="panel-body" style="padding-bottom:0;">
+                                    <div class="panel-body" style="padding-bottom: 0;">
                                         <form class="form-horizontal" id="jq-validation-form">
                                             <div class="col-sm-6 col-lg-3 form-group no-margin-hr">
                                                 <label class="control-label text-danger">訪談日期</label>
@@ -386,20 +384,20 @@
                                                     <div class="input-group-addon">
                                                         <i class="fa fa-calendar"></i>
                                                     </div>
-                                                    <input type="text" class="form-control" name="daterange" style="width:200px;" required="required" >
+                                                    <input type="text" class="form-control" name="daterange" style="width: 200px;" required="required">
                                                 </div>
                                             </div>
-                                            <div class="col-sm-6 col-lg-4 form-group no-margin-hr">
+                                            <div class="col-sm-6 col-lg-3 form-group no-margin-hr">
                                                 <label class="control-label">訪談內容</label>
-                                                <input type="text" class="form-control" >
+                                                <input type="text" class="form-control">
                                             </div>
                                             <div class="col-sm-3 col-lg-2 form-group no-margin-hr">
                                                 <label class="control-label">客戶姓名</label>
-                                                <input type="text" name="name" value="陳Ｏ成" class="form-control" style="width:150px;">
+                                                <input type="text" name="name" value="陳Ｏ成" class="form-control" style="width: 150px;">
                                             </div>
                                             <div class="col-sm-3 col-lg-2 form-group no-margin-hr ">
                                                 <label class="control-label">客戶身分證號</label>
-                                                <input type="text" name="id" value="A123456789" class="form-control"　style="width:150px;">
+                                                <input type="text" name="id" value="A123456789" class="form-control" style="width: 150px;">
                                             </div>
                                             <div class="col-sm-3 col-lg-2 form-group no-margin-hr">
                                                 <label class="control-label">追蹤名單</label>
@@ -417,127 +415,186 @@
                                                     <option value="2">有效</option>
                                                 </select>
                                             </div>
-                                            <div class="col-sm-12 form-group">
+                                            <div class="col-sm-1 form-group pull-right">
                                                 <button type="submit" class="btn btn-primary">搜尋</button>
-                                                <button type="submit" class="btn btn-primary">新增</button>
                                             </div>
                                         </form>
+
                                     </div>
                                     <!-- / .panel-body -->
                                 </div>
                                 <!-- / .collapse -->
-                                <div class="panel-body table-responsive">
-                                    <table id="table1" class="table table-bordered table-hover">
-                                        <thead>
-                                            <tr class=" bg-gray-light">
-                                                <th class="text-center no-padding-hr">SN</th>
-                                                <th class="text-center no-padding-hr">操作</th>
-                                                <th class="text-center">訪談日期</th>
-                                                <th class="text-center">客戶姓名</th>
-                                                <th class="text-center">所屬理專</th>
-                                                <th class="text-center">訪談理專</th>
-                                                <th class="text-center">訪談結果</th>
-                                                <th class="text-center">覆核主管</th>
-                                                <th class="text-center">訪談內容</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-right">1</td>
-                                                <td></td>        
-                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
-                                                <td>客戶姓名</td>
-                                                <td>吉林理1 </td>
-                                                <td>吉林理1 </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td style="word-break: break-all">顧客無意願 - 申請/作業手續麻煩</td>
-                                            </tr>                                            
-                                            <tr>
-                                                <td class="text-right">2</td>
-                                                <td></td>
-                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
-                                                <td>客戶姓名</td>
-                                                <td>吉林理1 </td>
-                                                <td>吉林理1 </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td style="word-break: break-all">顧客有意願 - 完成銷售/任務(關懷,滿意度調查..),不需轉介</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-right">3</td>
-                                                <td></td>
-                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
-                                                <td>客戶姓名</td>
-                                                <td>吉林理1 </td>
-                                                <td>吉林理1 </td>
-                                                <td></td>
-                                                <td></td>
-                                                <td style="word-break: break-all">顧客有意願 - 完成銷售，需轉介</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-right">4</td>
-                                                <td></td>
-                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
-                                                <td>客戶姓名</td>
-                                                <td>吉林理1 </td>
-                                                <td>吉林理1 </td>
-                                                <td>完成轉換</td>
-                                                <td></td>
-                                                <td style="word-break: break-all">既有客戶保險</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-right">5</td>
-                                                <td></td>
-                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
-                                                <td>客戶姓名</td>
-                                                <td>吉林理1 </td>
-                                                <td>吉林理1 </td>
-                                                <td>成交</td>
-                                                <td></td>
-                                                <td style="word-break: break-all">既有客戶一般性拜訪基金未成交理由</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-right">6</td>
-                                                <td></td>
-                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
-                                                <td>客戶姓名</td>
-                                                <td>吉林理1 </td>
-                                                <td>吉林理1 </td>
-                                                <td>完成通知 </td>
-                                                <td></td>
-                                                <td style="word-break: break-all">通知"創利全球焦"贖回金額:NTD 136,679</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-right">7</td>
-                                                <td></td>
-                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
-                                                <td>客戶姓名</td>
-                                                <td>吉林理1 </td>
-                                                <td>吉林理1 </td>
-                                                <td>考慮中</td>
-                                                <td></td>
-                                                <td style="word-break: break-all">轉介(轉介行員)市場分析手收</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-right">8</td>
-                                                <td></td>
-                                                <td class="text-center no-padding-hr">YYYY/MM/DD</td>
-                                                <td>客戶姓名</td>
-                                                <td>吉林理1 </td>
-                                                <td>吉林理1 </td>
-                                                <td>考慮中</td>
-                                                <td></td>
-                                                <td style="word-break: break-all">既有客戶市場分析黃金存摺一般性拜訪</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
                             </div>
                             <!-- / .panel -->
                         </div>
                     </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-dark-gray">
+                            <div class="panel-heading hidden">
+                                <span class="panel-title">With buttons</span>
+                                <div class="panel-heading-controls">
+                                    <button class="btn btn-xs btn-warning btn-outline"><span class="fa fa-refresh"></span>&nbsp;&nbsp;Refresh</button>
+                                    <button class="btn btn-xs btn-danger btn-outline"><span class="fa fa-paperclip"></span></button>
+                                    <button class="btn btn-success" data-toggle="modal" data-target="#modal-sizes-2">新增</button>
+                                </div>
+                                <!-- / .panel-heading-controls -->
+                            </div>
+                            <!-- / .panel-heading -->
+                            <div class="panel-body">
+                                <table id="table1" class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr class=" bg-gray-light">
+                                            <th class="text-center no-padding-hr">SN</th>
+                                            <th class="text-center no-padding-hr">操作</th>
+                                            <th class="text-center">訪談日期</th>
+                                            <th class="text-center">客戶姓名</th>
+                                            <th class="text-center">所屬理專</th>
+                                            <th class="text-center">訪談理專</th>
+                                            <th class="text-center">訪談結果</th>
+                                            <th class="text-center">覆核主管</th>
+                                            <th class="text-center">訪談內容</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-right">1</td>
+                                            <td></td>
+                                            <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                            <td>客戶姓名</td>
+                                            <td>吉林理1 </td>
+                                            <td>吉林理1 </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td style="word-break: break-all">顧客無意願 - 申請/作業手續麻煩</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-right">2</td>
+                                            <td></td>
+                                            <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                            <td>客戶姓名</td>
+                                            <td>吉林理1 </td>
+                                            <td>吉林理1 </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td style="word-break: break-all">顧客有意願 - 完成銷售/任務(關懷,滿意度調查..),不需轉介</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-right">3</td>
+                                            <td></td>
+                                            <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                            <td>客戶姓名</td>
+                                            <td>吉林理1 </td>
+                                            <td>吉林理1 </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td style="word-break: break-all">顧客有意願 - 完成銷售，需轉介</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-right">4</td>
+                                            <td></td>
+                                            <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                            <td>客戶姓名</td>
+                                            <td>吉林理1 </td>
+                                            <td>吉林理1 </td>
+                                            <td>完成轉換</td>
+                                            <td></td>
+                                            <td style="word-break: break-all">既有客戶保險</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-right">5</td>
+                                            <td></td>
+                                            <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                            <td>客戶姓名</td>
+                                            <td>吉林理1 </td>
+                                            <td>吉林理1 </td>
+                                            <td>成交</td>
+                                            <td></td>
+                                            <td style="word-break: break-all">既有客戶一般性拜訪基金未成交理由</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-right">6</td>
+                                            <td></td>
+                                            <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                            <td>客戶姓名</td>
+                                            <td>吉林理1 </td>
+                                            <td>吉林理1 </td>
+                                            <td>完成通知 </td>
+                                            <td></td>
+                                            <td style="word-break: break-all">通知"創利全球焦"贖回金額:NTD 136,679</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-right">7</td>
+                                            <td></td>
+                                            <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                            <td>客戶姓名</td>
+                                            <td>吉林理1 </td>
+                                            <td>吉林理1 </td>
+                                            <td>考慮中</td>
+                                            <td></td>
+                                            <td style="word-break: break-all">轉介(轉介行員)市場分析手收</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-right">8</td>
+                                            <td></td>
+                                            <td class="text-center no-padding-hr">YYYY/MM/DD</td>
+                                            <td>客戶姓名</td>
+                                            <td>吉林理1 </td>
+                                            <td>吉林理1 </td>
+                                            <td>考慮中</td>
+                                            <td></td>
+                                            <td style="word-break: break-all">既有客戶市場分析黃金存摺一般性拜訪</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                <!-- Large modal -->
+                <div id="modal-sizes-2" class="modal fade" tabindex="-1" role="dialog" style="display: none;">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h4 class="modal-title" id="myModalLabel">Modal Heading</h4>
+                            </div>
+                            <div class="modal-body">
+                                <h4>Text in a modal</h4>
+                                <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+
+                                <h4>Popover in a modal</h4>
+                                <p>This <a href="#" role="button" class="btn btn-default popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
+
+                                <h4>Tooltips in a modal</h4>
+                                <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+                                <hr>
+
+                                <h4>Overflowing text to show scroll behavior</h4>
+                                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                            </div>
+                            <!-- / .modal-body -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                        <!-- / .modal-content -->
+                    </div>
+                    <!-- / .modal-dialog -->
+                </div>
+                <!-- / .modal -->
+                <!-- / Large modal -->
             </section>
         <!-- / #content-wrapper -->
         <div id="main-menu-bg"></div>

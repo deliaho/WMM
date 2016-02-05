@@ -355,9 +355,8 @@
                             <label>A123456789</label>
                         </div>
                         <div class="col-md-5 col-lg-5 btn-group  no-padding-hr">
-                            <button class="btn btn-primary">全覽</button>
-                            <button class="btn btn-primary">風險控管</button>
-                            <button class="btn btn-primary">新增訪談</button>
+                            <a href="crm22.html" class="btn btn-primary" role="button">全覽</a>
+                            <a href="crm227.html" class="btn btn-primary" role="button">新增訪談</a>
                         </div>
                         <div class="col-md-2  no-padding-hr">
                             <button class=" btn btn-primary"><i class="fa fa-cart-arrow-down margin-r-5"></i>快速下單</button>
@@ -387,13 +386,58 @@
             <!-- Main content -->
             <section class="content">
                 <div class="row ">
-                    <!-- 顧客交易數 -->
+                    <div class="col-md-3">
+                        <div class="box box-primary box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title"><i class="fa  fa-suitcase margin-r-5"></i>客戶全覽</h3>
+                                <a href="crm221.html" class="btn btn-default pull-right" role="button">更多</a>
+                            </div>
+                            <!-- /.box-header -->
+                            <div class="box-body" style="font-size:16px;">
+                                <table id="Table4" class="table table-bordered">
+                                     <tbody>
+                                        <tr>
+                                            <td class=" bg-gray-light">客戶名稱</td>
+                                            <td>陳Ｏ成</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=" bg-gray-light">身分證號</td>
+                                            <td>A123456789</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=" bg-gray-light">會員等級</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=" bg-gray-light">通訊電話</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=" bg-gray-light">提醒事項</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td class=" bg-gray-light">通訊地址</td>
+                                            <td>台北市內湖區行愛路151號</td>
+                                        </tr>
+                                        <tr>
+                                            <td class=" bg-gray-light">最近交易</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                        <!-- /.box -->
+                    </div>
+                    <!-- ./col -->
+                    <!-- 整體資產 -->
                     <div class="col-md-4">
-                        <div class="box  box-primary box-solid">
+                        <div class="box box-primary box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title">
-                                    <i class="icon fa fa-pie-chart margin-r-5"></i>顧客交易數</h3>
-                                    <button class="btn btn-default pull-right">明細</button>
+                                    <i class="icon fa fa-pie-chart margin-r-5"></i>整體資產</h3>
                             </div>
                             <div class="box-body">
                                 <div class="box-body chart-responsive">
@@ -404,45 +448,54 @@
                         </div>
                     </div>
                     <!-- 訪談紀錄 -->
-                    <div class="col-md-8">
+                    <div class="col-md-5">
                         <div class="box box-primary box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title"><i class="fa  fa-suitcase margin-r-5"></i>訪談紀錄</h3>
+                                <a href="crm221.html" class="btn btn-default pull-right" role="button">進階查詢</a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <form class=" form-inline">
-                                    <div class="col-md-6 input-daterange input-group" id="bs-datepicker-range">
-                                        <input type="text" class="form-control" name="start" placeholder="Start date">
-                                        <span class="input-group-addon">to</span>
-                                        <input type="text" class="form-control" name="end" placeholder="End date">
-                                    </div>
-                                    <div class="col-md-6 pull-right">
-                                        <input type="text" class="form-control" style="width: 200px;" placeholder="內容">
-                                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                                    </div>
-                                </form>
-                                <form class=" form-inline">
+                                <form class="form-inline">
                                     <div class="form-group">
-                                        <label>日期:</label>
+                                        <label class="control-label text-danger">交易日期</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </div>
-                                            <input type="text" class="form-control pull-right" id="reservation">
+                                            <input type="text" class="form-control" name="daterange" style="width: 200px;" required="required">
                                         </div>
-                                        <!-- /.input group -->
                                     </div>
+                                    <div class="form-group">
+                                        <label class="control-label sr-only" >訪談內容</label>
+                                        <input class="form-control" placeholder="訪談內容">
+                                    </div>
+                                    <button class="btn btn-primary">搜尋</button>
                                 </form>
-                                <!-- /.form group -->
-                                <table class="table table-bordered table-striped">
+                                <table class="table table-bordered table-striped" style="margin-top:20px;">
                                     <thead>
-                                        <tr class=" bg-gray-light">
+                                        <tr class="bg-gray-light">
                                             <th class="no-padding-hr text text-center">訪談日期</th>
                                             <th class="no-padding-hr text text-center">訪談內容</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <tr>
+                                            <td class="text-center">2016/1/8</td>
+                                            <td>年度財富資料說明</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2016/1/8</td>
+                                            <td>年度財富資料說明</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2016/1/8</td>
+                                            <td>年度財富資料說明</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2016/1/8</td>
+                                            <td>年度財富資料說明</td>
+                                        </tr>
                                         <tr>
                                             <td class="text-center">2016/1/8</td>
                                             <td>年度財富資料說明</td>
@@ -513,49 +566,53 @@
     <script>
         $(function () {
             //Date range picker
-            $('#reservation').daterangepicker(
+            $('input[name="daterange"]').daterangepicker(
                 {
-                    "locale": {
-                        "format": "YYYY/MM/DD",
-                        "separator": " - ",
-                        "applyLabel": "Apply",
-                        "cancelLabel": "Cancel",
-                        "fromLabel": "From",
-                        "toLabel": "To",
-                        "customRangeLabel": "Custom",
-                        "daysOfWeek": [
-                            "日",
-                            "一",
-                            "二",
-                            "三",
-                            "四",
-                            "五",
-                            "六"
-                        ],
-                        "monthNames": [
-                            "1 月",
-                            "2 月",
-                            "3 月",
-                            "4 月",
-                            "5 月",
-                            "6 月",
-                            "7 月",
-                            "8 月",
-                            "9 月",
-                            "10 月",
-                            "11 月",
-                            "12 月"
-                        ],
-                        "firstDay": 1
-                    },
-                    "dateLimit": {
+                    singleDatePicker: false,
+                    showDropdowns: true,
+                    showWeekNumbers: false,
+                    timePicker: false,
+                    timePicker24Hour: false,
+                    timePickerSeconds: false,
+                    autoApply: true,
+                    opens: 'center',
+                    buttonClasses: ['btn btn-default'],
+                    applyClass: 'btn-small btn-primary',
+                    cancelClass: 'btn-small',
+                    firstDay: 1,
+                    separator: " - ",
+                    // 預設查最近7天
+                    startDate: moment().subtract('days', 6),
+                    endDate: moment(),
+                    // 最大日放在後7天，查預約交易
+                    maxDate: moment().add('days', 7),
+                    // 最多查5年內的資料
+                    minDate: moment().subtract('years', 5),
+                    // 資料範圍30天
+                    dateLimit: {
                         "days": 30
+                    },
+                    ranges: {
+                        '今天': [moment(), moment()],
+                        '昨天': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                        '最近7天': [moment().subtract('days', 6), moment()],
+                        '最近30天': [moment().subtract('days', 29), moment()],
+                        '本月': [moment().startOf('month'), moment().endOf('month')],
+                        '上個月': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+                    },
+                    locale: {
+                        format: "YYYY/MM/DD",
+                        applyLabel: '<i class="glyphicon glyphicon-ok"></i>',
+                        cancelLabel: '<i class="glyphicon glyphicon-remove"></i>',
+                        fromLabel: '起',
+                        toLabel: '訖',
+                        customRangeLabel: '自訂範圍',
+                        daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                        monthNames: ['1 月', '2 月', '3 月', '4 月', '5 月', '6 月', '7 月', '8 月', '9 月', '10 月', '11 月', '12 月'],
                     }
-                }
-                );
+                });
         });
     </script>
-
 <!--  
 $('#demo').daterangepicker({
     "dateLimit": {
@@ -686,10 +743,10 @@ $('#demo').daterangepicker({
                         "bgcolor": "FFFFFF",
                         "showvalues": "1",
                         "showpercentvalues": "1",
-                        "showLabels": "0",
+                        "showLabels": "1",
                         "showborder": "0",
                         "showplotborder": "0",
-                        "showlegend": "1",
+                        "showlegend": "0",
                         "legendborder": "0",
                         "legendposition": "right",
                         "enablesmartlabels": "1",
