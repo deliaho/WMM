@@ -366,25 +366,12 @@
                         <div class="panel-group no-margin-b" id="accordion-example">
                             <div class="panel panel-dark-gray">
                                 <div class="panel-heading" >
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-example" href="#collapse1" style="font-size: 16px; color:white;">訪談紀錄 </a>
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-example" href="#collapse1" style="font-size: 16px; color:white;">已贖回損益查詢</a>
                                 </div>
                                 <!-- / .panel-heading -->
                                 <div id="collapse1" class="panel-collapse in">
                                     <div class="panel-body" style="padding-bottom: 0;">
                                         <form class="form-horizontal" id="jq-validation-form">
-                                            <div class="col-sm-6 col-lg-3 form-group no-margin-hr">
-                                                <label class="control-label text-danger">訪談日期</label>
-                                                <div class="input-group">
-                                                    <div class="input-group-addon">
-                                                        <i class="fa fa-calendar"></i>
-                                                    </div>
-                                                    <input type="text" class="form-control" name="daterange" style="width: 200px;" required="required">
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-lg-3 form-group no-margin-hr">
-                                                <label class="control-label">訪談內容</label>
-                                                <input type="text" class="form-control">
-                                            </div>
                                             <div class="col-sm-3 col-lg-2 form-group no-margin-hr">
                                                 <label class="control-label">客戶姓名</label>
                                                 <input type="text" name="name" value="陳Ｏ成" class="form-control" style="width: 150px;">
@@ -393,27 +380,19 @@
                                                 <label class="control-label">客戶身分證號</label>
                                                 <input type="text" name="id" value="A123456789" class="form-control" style="width: 150px;">
                                             </div>
-                                            <div class="col-sm-3 col-lg-2 form-group no-margin-hr">
-                                                <label class="control-label">追蹤名單</label>
-                                                <select class="select2 form-control select2-drop-auto-width" autofocus>
-                                                    <option value="*">全部</option>
-                                                    <option value="1">是</option>
-                                                    <option value="2">否</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-sm-3 col-lg-2 form-group no-margin-hr">
-                                                <label class="control-label">追蹤期限</label>
-                                                <select class="select2 form-control select2-drop-auto-width" autofocus>
-                                                    <option value="*">全部</option>
-                                                    <option value="1">過期</option>
-                                                    <option value="2">有效</option>
-                                                </select>
+                                            <div class="col-sm-6 col-lg-3 form-group no-margin-hr">
+                                                <label class="control-label text-danger">贖回日期</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" class="form-control" name="daterange" style="width: 200px;" required="required">
+                                                </div>
                                             </div>
                                             <div class="col-sm-1 form-group">
                                                 <button type="submit" class="btn btn-primary" style="margin-top:30px;"><i class="fa fa-search margin-r-5"></i>搜尋</button>
                                             </div>
                                         </form>
-
                                     </div>
                                     <!-- / .panel-body -->
                                 </div>
@@ -425,16 +404,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12">
-                        <div class="panel panel-dark-gray">
-                            <div class="panel-heading hidden">
-                                <span class="panel-title">With buttons</span>
-                                <div class="panel-heading-controls">
-                                    <button class="btn btn-xs btn-warning btn-outline"><span class="fa fa-refresh"></span>&nbsp;&nbsp;Refresh</button>
-                                    <button class="btn btn-xs btn-danger btn-outline"><span class="fa fa-paperclip"></span></button>
-                                    <button class="btn btn-success" data-toggle="modal" data-target="#modal-sizes-2">新增</button>
-                                </div>
-                                <!-- / .panel-heading-controls -->
-                            </div>
+                        <div class="panel panel-dark-gray hidden">
                             <!-- / .panel-heading -->
                             <div class="panel-body">
                                 <table id="table1" class="table table-bordered table-hover">

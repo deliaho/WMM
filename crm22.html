@@ -280,10 +280,10 @@
                         <a href="#"><i class="menu-icon fa fa-diamond"></i><span class="mm-text">客戶管理</span></a>
                         <ul>
                             <li class="hidden"><a tabindex="-1" href="crm21.html"><span class="mm-text">基本資料</span></a></li>
-                            <li class="active"><a tabindex="-1" href="crm22.html"><span class="mm-text">客戶資訊</span></a></li>
-                            <li><a tabindex="-1" href="crm23.html"><span class="mm-text">財富資料</span></a></li>
+                            <li><a tabindex="-1" href="crm22.html"><span class="mm-text">客戶資訊</span></a></li>
+                            <li><a tabindex="-1" href="crm02.html"><span class="mm-text">財富資料</span></a></li>
                             <li><a tabindex="-1" href="crm24.html"><span class="mm-text">資產結構</span></a></li>
-                            <li><a tabindex="-1" href="crm25.html"><span class="mm-text">交易紀錄查詢</span></a></li>
+                            <li><a tabindex="-1" href="crm221.html"><span class="mm-text">交易紀錄查詢</span></a></li>
                             <li><a tabindex="-1" href="crm26.html"><span class="mm-text">已贖回損益查詢</span></a></li>
                             <li><a tabindex="-1" href="crm27.html"><span class="mm-text">訪談紀錄</span></a></li>
                             <li><a tabindex="-1" href="crm28.html"><span class="mm-text">KYC相關</span></a></li>
@@ -355,7 +355,7 @@
                             <label>A123456789</label>
                         </div>
                         <div class="col-md-5 col-lg-5 btn-group  no-padding-hr">
-                            <a href="crm22.html" class="btn btn-primary" role="button">全覽</a>
+                            <a href="crm22.html" class="btn btn-primary active" role="button">全覽</a>
                             <a href="crm227.html" class="btn btn-primary" role="button">新增訪談</a>
                         </div>
                         <div class="col-md-2  no-padding-hr">
@@ -365,17 +365,17 @@
                     <div class="col-md-12 text-center">
                         <a href="crm01.html" class="btn btn-app btn-primary  btn-lg disabled" >
                             <i class="glyphicon glyphicon-list"></i><span>基本資料</span></a>
-                        <a href="crm02.html" class="btn btn-app btn-primary btn-lg active" style="color: #f7ba9b;">
+                        <a href="crm02.html" class="btn btn-app btn-primary btn-lg">
                             <i class="fa  fa-dashboard"></i>客戶資訊</a>
-                        <a href="crm03.html" class="btn btn-app btn-primary btn-lg">
+                        <a href="crm02.html" class="btn btn-app btn-primary btn-lg">
                             <i class="glyphicon glyphicon-piggy-bank"></i>財富資料</a>
                         <a href="crm04.html" class="btn btn-app btn-primary btn-lg" >
                             <i class="fa  fa-sitemap"></i>資產結構</a>
-                        <a href="crm05.html" class="btn btn-app btn-primary btn-lg" >
+                        <a href="crm221.html" class="btn btn-app btn-primary btn-lg" >
                             <i class="fa fa-shopping-cart"></i>交易紀錄</a>
-                        <a href="crm06.html" class="btn btn-app btn-primary btn-lg"  >
+                        <a href="crm226.html" class="btn btn-app btn-primary btn-lg"  >
                             <i class="	fa fa-line-chart"></i>已贖回損益</a>
-                        <a href="crm07.html" class="btn btn-app btn-primary btn-lg" >
+                        <a href="crm227.html" class="btn btn-app btn-primary btn-lg" >
                             <i class="fa fa-briefcase"></i>訪談紀錄</a>
                         <a href="crm08.html" class="btn btn-app btn-primary btn-lg">
                             <i class="fa fa-lock"></i>KYC相關</a>
@@ -452,13 +452,13 @@
                         <div class="box box-primary box-solid">
                             <div class="box-header with-border">
                                 <h3 class="box-title"><i class="fa  fa-suitcase margin-r-5"></i>訪談紀錄</h3>
-                                <a href="crm221.html" class="btn btn-default pull-right" role="button">進階查詢</a>
+                                <a href="crm227.html" class="btn btn-default pull-right" role="button">進階查詢</a>
                             </div>
                             <!-- /.box-header -->
                             <div class="box-body">
                                 <form class="form-inline">
                                     <div class="form-group">
-                                        <label class="control-label text-danger">交易日期</label>
+                                        <label class="control-label text-danger">日期</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
@@ -506,6 +506,172 @@
                             <!-- /.box -->
                         </div>
                     </div>
+                    <!-- 投資庫存 -->
+                    <div class="col-md-12 col-lg-6">
+                        <div class="box box-primary box-solid"  >
+                            <div class="box-header with-border">
+                                <h3 class="box-title"><i class="icon fa fa-bell margin-r-5"></i>投資庫存</h3>
+                            </div>
+                            <div class="box-body">
+                                <ul id="uidemo-tabs-default-demo" class="nav nav-tabs">
+                                    <li class="active">
+                                        <a href="#uidemo-tabs-1" data-toggle="tab">基金</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#uidemo-tabs-2" data-toggle="tab">債券</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#uidemo-tabs-3" data-toggle="tab">ETF</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#uidemo-tabs-4" data-toggle="tab">組合式商品</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#uidemo-tabs-5" data-toggle="tab">黃金存摺</a>
+                                    </li>
+                                    <!-- / .dropdown -->
+                                </ul>
+                                <div class="tab-content tab-content-bordered">
+                                    <div class="tab-pane fade active in" id="uidemo-tabs-1">
+                                        <table id="table1" class="table table-bordered table-hover">
+                                            <thead>
+                                                <tr class=" bg-gray-light">
+                                                    <th class="text-center">投資方式</th>
+                                                    <th class="text-center">信託編號</th>
+                                                    <th class="text-center">產品名稱</th>
+                                                    <th class="text-center">投資幣別</th>
+                                                    <th class="text-center">投資金額(含手續費)</th>
+                                                    <th class="text-center">報酬率</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>定期(不)定額</td>
+                                                    <td>00320000606</td>
+                                                    <td><a href="http://tbbfwstest.moneydj.com/w4/wb/wb01.djhtm?A=AIZ49-1518&aspid=TBB" target="_blank">1518 柏瑞印度</a></td>
+                                                    <td class="text-center">NTD</td>
+                                                    <td class="text-right">121,800</td>
+                                                    <td class="text-right">0.55%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>定期(不)定額</td>
+                                                    <td>00007090334</td>
+                                                    <td><a href="http://tbbfwstest.moneydj.com/w4/wb/wb01.djhtm?A=TLZ20-0913&aspid=TBB" target="_blank">0913 德盛香港</a></td>
+                                                    <td class="text-center">NTD</td>
+                                                    <td class="text-right">116,198</td>
+                                                    <td class="text-right">0.16%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>定期(不)定額</td>
+                                                    <td>00320000054</td>
+                                                    <td><a href="http://tbbfwstest.moneydj.com/w4/wb/wb01.djhtm?A=TLZ20-0913&aspid=TBB" target="_blank">0913 德盛香港</a></td>
+                                                    <td class="text-center">NTD</td>
+                                                    <td class="text-right">121,091</td>
+                                                    <td class="text-right">0.05%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>定期(不)定額</td>
+                                                    <td>00320000402</td>
+                                                    <td><a href="http://tbbfwstest.moneydj.com/w4/wb/wb01.djhtm?A=JFH02-0157&aspid=TBB" target="_blank">0157 摩根中國</a></td>
+                                                    <td class="text-center">NTD</td>
+                                                    <td class="text-right">228,217</td>
+                                                    <td class="text-right">0.01%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>定期(不)定額</td>
+                                                    <td>00007090338</td>
+                                                    <td><a href="http://tbbfwstest.moneydj.com/w4/wb/wb01.djhtm?A=JFH02-0157&aspid=TBB" target="_blank">1323 聯博印度Ａ</a></td>
+                                                    <td class="text-center">NTD</td>
+                                                    <td class="text-right">145,975</td>
+                                                    <td class="text-right text-red">-0.01%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>定期(不)定額</td>
+                                                    <td>00007077379</td>
+                                                    <td><a href="http://tbbfwstest.moneydj.com/w4/wb/wb01.djhtm?A=ALZ60-1315&aspid=TBB" target="_blank">1315 聯全高收美</a></td>
+                                                    <td class="text-center">NTD</td>
+                                                    <td class="text-right">201,500</td>
+                                                    <td class="text-right text-red">-0.06%</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- / .tab-pane -->
+                                    <div class="tab-pane fade" id="uidemo-tabs-2">
+                                        <table id="table2" class="table table-bordered table-hover">
+                                            <thead>
+                                                <tr class=" bg-gray-light">
+                                                    <th class="text-center">信託編號</th>
+                                                    <th class="text-center">產品名稱</th>
+                                                    <th class="text-center">投資幣別</th>
+                                                    <th class="text-center">投資金額(含手續費)</th>
+                                                    <th class="text-center">報酬率</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <!-- / .tab-pane -->
+                                    <div class="tab-pane fade" id="uidemo-tabs-3">
+                                        <table id="table3" class="table table-bordered table-hover">
+                                            <thead>
+                                                <tr class=" bg-gray-light">
+                                                    <th class="text-center">信託編號</th>
+                                                    <th class="text-center">產品名稱</th>
+                                                    <th class="text-center">投資幣別</th>
+                                                    <th class="text-center">投資金額(含手續費)</th>
+                                                    <th class="text-center">報酬率</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <!-- / .tab-pane -->
+                                    <div class="tab-pane fade" id="uidemo-tabs-4">
+                                        <table id="table4" class="table table-bordered table-hover">
+                                            <thead>
+                                                <tr class=" bg-gray-light">
+                                                    <th class="text-center">產品名稱</th>
+                                                    <th class="text-center">投資幣別</th>
+                                                    <th class="text-center">投資金額</th>
+                                                    <th class="text-center">報酬率</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <!-- / .tab-pane -->
+                                    <div class="tab-pane fade" id="uidemo-tabs-5">
+                                        <table id="table5" class="table table-bordered table-hover">
+                                            <thead>
+                                                <tr class=" bg-gray-light">
+                                                    <th class="text-center">黃金存摺帳號</th>
+                                                    <th class="text-center">幣別</th>
+                                                    <th class="text-center">可用餘額(公克)</th>
+                                                    <th class="text-center">現值(元)</th>
+                                                    <th class="text-center">預估損益率</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <!-- / .tab-pane -->
+                                </div>
+                                <!-- / .tab-content -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- AUM vs 貢獻度 -->
+                    <div class="col-md-12 col-lg-4">
+                        <div class="box box-primary box-solid">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">
+                                    <i class="icon fa fa-pie-chart margin-r-5"></i>AUM vs 貢獻度</h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="box-body chart-responsive">
+                                    <div id="chart1" class="chart"></div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>                
                 </div>
             </section>
         <!-- / #content-wrapper -->
@@ -613,91 +779,19 @@
                 });
         });
     </script>
-<!--  
-$('#demo').daterangepicker({
-    "dateLimit": {
-        "days": 7
-    },
-    "ranges": {
-        "Today": [
-            "2016-02-01T09:52:46.810Z",
-            "2016-02-01T09:52:46.810Z"
-        ],
-        "Yesterday": [
-            "2016-01-31T09:52:46.810Z",
-            "2016-01-31T09:52:46.810Z"
-        ],
-        "Last 7 Days": [
-            "2016-01-26T09:52:46.810Z",
-            "2016-02-01T09:52:46.810Z"
-        ],
-        "Last 30 Days": [
-            "2016-01-03T09:52:46.810Z",
-            "2016-02-01T09:52:46.810Z"
-        ],
-        "This Month": [
-            "2016-01-31T16:00:00.000Z",
-            "2016-02-29T15:59:59.999Z"
-        ],
-        "Last Month": [
-            "2015-12-31T16:00:00.000Z",
-            "2016-01-31T15:59:59.999Z"
-        ]
-    },
-    "locale": {
-        "format": "MM/DD/YYYY",
-        "separator": " - ",
-        "applyLabel": "Apply",
-        "cancelLabel": "Cancel",
-        "fromLabel": "From",
-        "toLabel": "To",
-        "customRangeLabel": "Custom",
-        "daysOfWeek": [
-            "Su",
-            "Mo",
-            "Tu",
-            "We",
-            "Th",
-            "Fr",
-            "Sa"
-        ],
-        "monthNames": [
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"
-        ],
-        "firstDay": 1
-    },
-    "startDate": "01/26/2016",
-    "endDate": "02/01/2016"
-}, function(start, end, label) {
-  console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
-});    
-    
-    
--->
-
-
-
     <!-- DataTables -->
     <script src="plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
     <script>
         $(function () {
             $('#table1').DataTable({
-                "oLanguage": {
-                    "oPaginate": {
-                        "sPrevious": "<",
-                        "sNext": ">"
+                "language": {
+                    "emptyTable": "-- 無資料 --",
+                    "paginate": {
+                        'first': '<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>',
+                        'last': '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>',
+                        'previous': '<i class="fa fa-chevron-left"></i>',
+                        'next': '<i class="fa fa-chevron-right"></i>'
                     }
                 },
                 "paging": true,
@@ -709,10 +803,67 @@ $('#demo').daterangepicker({
                 "autoWidth": false
             });
             $('#table2').DataTable({
-                "oLanguage": {
-                    "oPaginate": {
-                        "sPrevious": "<",
-                        "sNext": ">"
+                "language": {
+                    "emptyTable": "-- 無資料 --",
+                    "paginate": {
+                        'first': '<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>',
+                        'last': '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>',
+                        'previous': '<i class="fa fa-chevron-left"></i>',
+                        'next': '<i class="fa fa-chevron-right"></i>'
+                    }
+                },
+                "paging": true,
+                "pageLength": 5,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false
+            });
+            $('#table3').DataTable({
+                "language": {
+                    "emptyTable": "-- 無資料 --",
+                    "paginate": {
+                        'first': '<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>',
+                        'last': '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>',
+                        'previous': '<i class="fa fa-chevron-left"></i>',
+                        'next': '<i class="fa fa-chevron-right"></i>'
+                    }
+                },
+                "paging": true,
+                "pageLength": 5,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false
+            });
+            $('#table4').DataTable({
+                "language": {
+                    "emptyTable": "-- 無資料 --",
+                    "paginate": {
+                        'first': '<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>',
+                        'last': '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>',
+                        'previous': '<i class="fa fa-chevron-left"></i>',
+                        'next': '<i class="fa fa-chevron-right"></i>'
+                    }
+                },
+                "paging": true,
+                "pageLength": 5,
+                "lengthChange": false,
+                "searching": false,
+                "ordering": false,
+                "info": false,
+                "autoWidth": false
+            });
+            $('#table5').DataTable({
+                "language": {
+                    "emptyTable": "-- 無資料 --",
+                    "paginate": {
+                        'first': '<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>',
+                        'last': '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>',
+                        'previous': '<i class="fa fa-chevron-left"></i>',
+                        'next': '<i class="fa fa-chevron-right"></i>'
                     }
                 },
                 "paging": true,
@@ -786,6 +937,152 @@ $('#demo').daterangepicker({
             }).render();
         });
     </script>
+
+    <script type="text/javascript">
+        FusionCharts.ready(function () {
+            var revenueChart = new FusionCharts({
+                type: 'mscolumn3dlinedy',
+                renderAt: 'chart1',
+                width: '550',
+                height: '350',
+                dataFormat: 'json',
+                dataSource: {
+                    "chart": {
+                        //"caption": "Product-wise Quarterly Revenue vs. Profit %",
+                        //"subCaption": "Harry's SuperMart - Last Year",
+                        //"xAxisname": "Quarter",
+                        "pYAxisName": "AUM",
+                        "sYAxisName": "當月貢獻度",
+                        //"numberPrefix": "$",
+                        //"sNumberSuffix": "%",
+                        "sYAxisMaxValue": "25",
+                        "paletteColors": "#f2af00,#dc5034,#7ab800",
+                        "bgColor": "#ffffff",
+                        "showBorder": "0",
+                        "showCanvasBorder": "0",
+                        "usePlotGradientColor": "0",
+                        "plotBorderAlpha": "10",
+                        "legendBorderAlpha": "0",
+                        "legendBgAlpha": "0",
+                        "legendShadow": "0",
+                        "showHoverEffect": "1",
+                        "valueFontColor": "#ffffff",
+                        "rotateValues": "1",
+                        "placeValuesInside": "0",
+                        "divlineColor": "#999999",
+                        "divLineIsDashed": "1",
+                        "divLineDashLen": "1",
+                        "divLineGapLen": "1",
+                        "canvasBgColor": "#ffffff",
+                        "captionFontSize": "14",
+                        "subcaptionFontSize": "14",
+                        "subcaptionFontBold": "0",
+                        "showValues": "0"
+                    },
+                    "categories": [
+                        {
+                            "category": [
+                                {
+                                    "label": "2015/09"
+                                },
+                                {
+                                    "label": "2015/10"
+                                },
+                                {
+                                    "label": "2015/11"
+                                },
+                                {
+                                    "label": "2015/12"
+                                },
+                                {
+                                    "label": "2016/01"
+                                },
+                                {
+                                    "label": "2016/02"
+                                }
+                            ]
+                        }
+                    ],
+                    "dataset": [
+                        {
+                            "seriesname": "AUM",
+                            "data": [
+                                {
+                                    "value": "11000"
+                                },
+                                {
+                                    "value": "14000"
+                                },
+                                {
+                                    "value": "10500"
+                                },
+                                {
+                                    "value": "11000"
+                                },
+                                {
+                                    "value": "14000"
+                                },
+                                {
+                                    "value": "15000"
+                                }
+                            ]
+                        },
+                        {
+                            "seriesname": "理財 AUM",
+                            "data": [
+                                {
+                                    "value": "14400"
+                                },
+                                {
+                                    "value": "14800"
+                                },
+                                {
+                                    "value": "8300"
+                                },
+                                {
+                                    "value": "14400"
+                                },
+                                {
+                                    "value": "14800"
+                                },
+                                {
+                                    "value": "11800"
+                                }
+                            ]
+                        },
+                        {
+                            "seriesname": "當月貢獻度",
+                            "renderAs": "line",
+                            "parentYAxis": "S",
+                            "showValues": "0",
+                            "data": [
+                                {
+                                    "value": "14000"
+                                },
+                                {
+                                    "value": "16000"
+                                },
+                                {
+                                    "value": "15000"
+                                },
+                                {
+                                    "value": "14000"
+                                },
+                                {
+                                    "value": "16000"
+                                },
+                                {
+                                    "value": "17000"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            })
+            .render();
+        });
+    </script>
+
     <!-- Bootstrap Datepicker-->
     <script>
         init.push(function () {
@@ -805,6 +1102,5 @@ $('#demo').daterangepicker({
             $('#bs-datepicker-inline').datepicker();
         });
     </script>
-    <!-- / Bootstrap Datepicker -->
-</body>
+    <!-- / Bootstrap Datepicker --></body>
 </html>

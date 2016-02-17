@@ -331,7 +331,7 @@
                                 <option>產品名稱</option>
                             </select>
                             <input type="text" class="form-control" style="width: 150px;">
-                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                            <button type="submit" class="btn btn-default"  onclick="javascript:location.href='crm22.html'"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
                     <div class="col-md-7 btn-group">
@@ -1248,7 +1248,16 @@
                 "searching": false,
                 "ordering": false,
                 "info": false,
-                "pageLength": 2
+                "pageLength": 2,
+                "language": {
+                    "emptyTable": "-- 無資料 --",
+                    "paginate": {
+                        'first': '<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>',
+                        'last': '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>',
+                        'previous': '<i class="fa fa-chevron-left"></i>',
+                        'next': '<i class="fa fa-chevron-right"></i>'
+                    }
+                }
             });
             $('#example2').DataTable({
                 "paging": true,
@@ -1257,13 +1266,25 @@
                 "searching": false,
                 "ordering": false,
                 "info": false,
-                "autoWidth": false
+                "autoWidth": false,
+                "language": {
+                    "emptyTable": "-- 無資料 --",
+                    "paginate": {
+                        'first': '<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>',
+                        'last': '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>',
+                        'previous': '<i class="fa fa-chevron-left"></i>',
+                        'next': '<i class="fa fa-chevron-right"></i>'
+                    }
+                }
             });
             $('#example3').DataTable({
-                "oLanguage": {
-                    "oPaginate": {
-                        "sPrevious": "<",
-                        "sNext": ">"
+                "language": {
+                    "emptyTable": "-- 無資料 --",
+                    "paginate": {
+                        'first': '<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>',
+                        'last': '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>',
+                        'previous': '<i class="fa fa-chevron-left"></i>',
+                        'next': '<i class="fa fa-chevron-right"></i>'
                     }
                 },
                 "paging": true,
