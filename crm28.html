@@ -1,0 +1,910 @@
+﻿<!DOCTYPE html>
+<html class="gt-ie8 gt-ie9 not-ie">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>DDSC | CRM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- url icon -->
+    <link rel="shortcut icon" href="dist/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="dist/img/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="plugins/datatables/dataTables.bootstrap.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons 
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">-->
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+         folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="plugins/iCheck/flat/blue.css">
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="plugins/morris/morris.css">
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <!-- fullCalendar 2.2.5-->
+    <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="plugins/fullcalendar/fullcalendar.print.css" media="print">
+    <!-- Pixel Admin's stylesheets -->
+    <link href="assets/stylesheets/pixel-admin.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/widgets.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/rtl.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/stylesheets/themes.min.css" rel="stylesheet" type="text/css">
+    <!-- 自訂 style，後續再彙整 -->
+    <style>
+        .table-striped-column tbody tr th:nth-of-type(odd)
+        {
+            background-color: #f9f9f9;
+        }
+        .fc-head
+        {
+            font-size: 16px;
+        }
+        .fc-center.h2, h2
+        {
+            font-size: 18px;
+        }
+        th.fc-day-header.fc-widget-header.fc-sat
+        {
+            font-size: 16px;
+        }
+
+        .fc-content
+        {
+            font-size: 15px;
+            padding: 2px,2px,2px,2px;
+        }
+        .btn-app 
+        {
+           margin: 1px -2px 1px -2px;   /* 上下避免連在一起，左右距離縮小，如果用 btn-group 無法置中，所以修改btn-app*/
+        }
+        td
+        {
+           /* word-break: break-all;  數字依照版面換行*/
+        }
+    </style>
+</head>
+<!-- top & left 固定 -->
+<body class="theme-default main-menu-animated">
+    <script>var init = [];</script>
+    <!-- Demo script 
+    <script src="assets/demo/demo.js"></script>-->
+    <!-- / Demo script -->
+    <div id="main-wrapper" >
+        <div id="main-navbar" class="navbar navbar-inverse" role="navigation">
+            <!-- Main menu toggle -->
+            <button type="button" id="main-menu-toggle"><i class="navbar-icon fa fa-bars icon"></i><span class="hide-menu-text">HIDE MENU</span></button>
+            <div class="navbar-inner" style="height: 46px;">
+                <!-- Main navbar header -->
+                <div class="navbar-header">
+                    <!-- Logo (height: 46px)-->
+                    <a href="index.html">
+                        <div class="navbar-brand no-padding-hr" style="margin-bottom: 2px; padding-top: 4px;">
+                            <img class="logo-lg img-responsive" style="height:38px;" src="dist/img/logo.jpg"  alt="logo" >
+                        </div>
+                        <!-- Product name  (height: 46px)-->
+                        <div class="navbar-brand" style="margin-bottom: -5px;">
+                            <img class="img-responsive" src="dist/img/header_title.png" alt="WMM" >
+                        </div>
+                    </a>
+                    <!-- Main navbar toggle -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
+                </div>
+                <!-- / .navbar-header -->
+                <div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
+                    <div>
+                        <!-- / .navbar-nav  -->
+                        <!--
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">理專首頁</a>
+						</li>
+						<li>
+							<a href="#">主管首頁</a>
+						</li>
+                        
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">First item</a></li>
+								<li><a href="#">Second item</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Third item</a></li>
+							</ul>
+						</li>
+                        </ul>
+                      -->
+                        <div class="right clearfix">
+                            <ul class="nav navbar-nav pull-right right-navbar-nav">
+                                <!-- 重要訊息 -->
+                                <li class="nav-icon-btn nav-icon-btn-danger dropdown">
+                                    <a href="#notifications" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span class="label">5</span>
+                                        <i class="nav-icon fa fa-bell-o"></i>
+                                        <span class="small-screen-text">訊息</span>
+                                    </a>
+                                    <!-- NOTIFICATIONS -->
+                                    <!-- Javascript -->
+                                    <script>
+                                        init.push(function () {
+                                            $('#main-navbar-notifications').slimScroll({ height: 250 });
+                                        });
+                                    </script>
+                                    <!-- / Javascript -->
+                                    <div class="dropdown-menu widget-notifications no-padding" style="width: 300px">
+                                        <div class="notifications-list" id="main-navbar-notifications">
+                                            <div class="notification">
+                                                <div class="notification-title text-green">系統上線</div>
+                                                <div class="notification-description"><strong>財富管理系統上線</strong></div>
+                                                <div class="notification-icon glyphicon glyphicon-info-sign text-green"></div>
+                                            </div>
+                                            <!-- / .notification -->
+                                            <div class="notification">
+                                                <div class="notification-title text-red">暫停服務</div>
+                                                <div class="notification-description">網路銀行維護</div>
+                                                <div class="notification-icon glyphicon glyphicon-exclamation-sign text-red"></div>
+                                            </div>
+                                            <!-- / .notification -->
+
+                                            <div class="notification">
+                                                <div class="notification-title text-green">系統上線</div>
+                                                <div class="notification-description">網路銀行/行動銀行新增功能上線</div>
+                                                <div class="notification-icon glyphicon glyphicon-info-sign text-green"></div>
+                                            </div>
+                                            <!-- / .notification -->
+
+                                            <div class="notification">
+                                                <div class="notification-title text-warning">修改密碼</div>
+                                                <div class="notification-description">請於 2015/12/31 前修改密碼</div>
+                                                <div class="notification-icon glyphicon glyphicon-warning-sign text-warning"></div>
+                                            </div>
+                                            <!-- / .notification -->
+
+                                            <div class="notification">
+                                                <div class="notification-title text-green">新增功能上線</div>
+                                                <div class="notification-description"><strong>行動銀行新增功能上線</strong></div>
+                                                <div class="notification-icon glyphicon glyphicon-info-sign text-green"></div>
+                                            </div>
+                                            <!-- / .notification -->
+                                            <div class="notification">
+                                                <div class="notification-title text-green">新增功能上線</div>
+                                                <div class="notification-description"><strong>網路銀行新增功能上線</strong></div>
+                                                <div class="notification-icon glyphicon glyphicon-info-sign text-green"></div>
+                                            </div>
+                                            <!-- / .notification -->
+
+                                        </div>
+                                        <!-- / .notifications-list -->
+                                        <a href="#" class="notifications-link">更多訊息</a>
+                                    </div>
+                                    <!-- / .dropdown-menu -->
+                                </li>
+                                <li class="nav-icon-btn nav-icon-btn-success dropdown">
+                                    <a href="#messages" class="dropdown-toggle" data-toggle="dropdown">
+                                        <span class="label">10</span>
+                                        <i class="nav-icon fa fa-flag-o"></i>
+                                        <span class="small-screen-text">待覆核資料</span>
+                                    </a>
+                                    <!-- MESSAGES -->
+                                    <!-- Javascript -->
+                                    <script>
+                                        init.push(function () {
+                                            $('#main-navbar-messages').slimScroll({ height: 250 });
+                                        });
+                                    </script>
+                                    <!-- / Javascript -->
+                                    <div class="dropdown-menu widget-messages-alt no-padding" style="width: 300px;">
+                                        <div class="messages-list" id="main-navbar-messages">
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">大額資產警示門檻設定覆核</a>
+                                            </div>
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">客戶分級級距資料覆核 - 高級人員.</a>
+                                            </div>
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">客戶分級級距資料覆核 - 特等尊貴</a>
+                                            </div>
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">客戶分級級距資料覆核 - 一般</a>
+                                            </div>
+                                            <div class="message">
+                                                <a href="#" class="message-subject no-padding">大額資產警示門檻設定覆核</a>
+                                            </div>
+                                        </div>
+                                        <!-- / .messages-list -->
+                                        <a href="#" class="messages-link">更多資料</a>
+                                    </div>
+                                    <!-- / .dropdown-menu -->
+                                </li>
+                                <!-- /3. $END_NAVBAR_ICON_BUTTONS -->
+                                <li>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="nav-icon fa fa-user" style="color: #eb5405;"></i>
+                                        <span style="padding-right: 10px;">888 營業部</span>
+                                        <span>888888 錢大軍</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signin.html">
+                                        <i class="nav-icon glyphicon glyphicon-log-out" style="color: #3cba54;"></i>
+                                        <span class="small-screen-text">登出</span>
+                                        <span id="clock" class="label bg-red"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- / .navbar-nav -->
+                        </div>
+                        <!-- / .right -->
+                    </div>
+                </div>
+                <!-- / #main-navbar-collapse -->
+            </div>
+            <!-- / .navbar-inner -->
+        </div>
+        <!-- / #main-navbar -->
+        <div id="main-menu" role="navigation">
+            <div id="main-menu-inner">
+                <ul class="navigation">
+                    <li>
+                        <a href="index.html"><i class="menu-icon fa fa-home"></i><span class="mm-text">首頁</span></a>
+                    </li>
+                    <li  class="active">
+                        <a href="index1.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">主管儀表板</span></a>
+                    </li>
+                    <li>
+                        <a href="index2.html"><i class="menu-icon fa fa-dashboard"></i><span class="mm-text">理專儀表板</span></a>
+                    </li>
+                    <li>
+                        <a href="index3.html"><i class="menu-icon fa fa-line-chart"></i><span class="mm-text">金融行情</span></a>
+                    </li>
+                    <li class="mm-dropdown">
+                        <a href="#"><i class="menu-icon fa fa-diamond"></i><span class="mm-text">客戶管理</span></a>
+                        <ul>
+                            <li><a tabindex="-1" href="crm21.html"><span class="mm-text">基本資料</span></a></li>
+                            <li><a tabindex="-1" href="#"><span class="mm-text">客戶資訊</span></a></li>
+                            <li><a tabindex="-1" href="crm02.html"><span class="mm-text">財富資料</span></a></li>
+                            <li><a tabindex="-1" href="#"><span class="mm-text">資產結構</span></a></li>
+                            <li><a tabindex="-1" href="crm221.html"><span class="mm-text">交易紀錄查詢</span></a></li>
+                            <li><a tabindex="-1" href="crm226.html"><span class="mm-text">已贖回損益查詢</span></a></li>
+                            <li><a tabindex="-1" href="crm227.html"><span class="mm-text">訪談紀錄</span></a></li>
+                            <li class="active"><a tabindex="-1" href="crm28.html"><span class="mm-text">KYC相關</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="mm-dropdown">
+                        <a href="#"><i class="menu-icon fa fa-th"></i><span class="mm-text">客戶財富資料</span></a>
+                        <ul>
+                            <li><a tabindex="-1" href="crm01.html"><span class="mm-text">存摺、貸款</span></a></li>
+                            <li><a tabindex="-1" href="crm02.html"><span class="mm-text">基金、債券、ETF</span></a></li>
+                            <li><a tabindex="-1" href="crm03.html"><span class="mm-text">在途投資明細</span></a></li>
+                            <li><a tabindex="-1" href="crm04.html"><span class="mm-text">保險</span></a></li>
+                            <li><a tabindex="-1" href="crm05.html"><span class="mm-text">黃金存摺</span></a></li>
+                            <li><a tabindex="-1" href="crm06.html"><span class="mm-text">組合式產品</span></a></li>
+                            <li><a tabindex="-1" href="crm07.html"><span class="mm-text">票債券</span></a></li>
+                            <li><a tabindex="-1" href="crm08.html"><span class="mm-text">信用卡</span></a></li>
+                            <li><a tabindex="-1" href="crm09.html"><span class="mm-text">證券</span></a></li>
+                            <li><a tabindex="-1" href="crm10.html"><span class="mm-text">Mail</span></a></li>
+                        </ul>
+                    </li>
+                    <!--<li>
+                        <a href="stat-panels.html"><i class="menu-icon fa fa-tasks"></i><span class="mm-text">客戶資產</span></a>
+                    </li>
+                    <li>
+                        <a href="widgets.html"><i class="menu-icon fa fa-flask"></i><span class="mm-text">投資建議書</span></a>
+                    </li>
+                    <li class="mm-dropdown">
+                        <a href="#"><i class="menu-icon fa fa-check-square"></i><span class="mm-text">交易紀錄查詢</span></a>
+                        <ul>
+                            <li>
+                                <a tabindex="-1" href="forms-layouts.html"><span class="mm-text">基金、債券、ETF</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="forms-general.html"><span class="mm-text">黃金存摺</span></a>
+                            </li>
+                            <li>
+                                <a tabindex="-1" href="forms-advanced.html"><span class="mm-text">組合式存款</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="complete-ui.html"><i class="menu-icon fa fa-briefcase"></i><span class="mm-text">訪談記錄查詢</span></a>
+                    </li> -->
+                </ul>
+                <!-- / .navigation -->
+            </div>
+            <!-- / #main-menu-inner -->
+        </div>
+        <!-- / #main-menu -->
+        <div id="content-wrapper">
+            <div class="page-header no-padding" style="margin-bottom: -10px;">
+                <div class="row margin">
+                    <div class="col-md-4 col-lg-4 no-padding-hr">
+                        <div class="input-group">
+                            <select class="form-control select2" style="width: 120px;">
+                                <option selected="selected">身分證號</option>
+                                <option>姓名(模糊)</option>
+                                <option>姓名(精準)</option>
+                                <option>產品名稱</option>
+                            </select>
+                            <input type="text" class="form-control" style="width: 150px;">
+                            <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-lg-8 no-padding-hr">
+                        <div class="col-md-5 col-lg-5 text-center no-padding-hr" style="font-size: smaller; color: #eb5405;">
+                            <i class="glyphicon glyphicon-user margin-r-5"></i>
+                            <label>陳Ｏ成</label>
+                            <label>A123456789</label>
+                        </div>
+                        <div class="col-md-5 col-lg-5 btn-group  no-padding-hr">
+                            <a href="crm22.html" class="btn btn-primary" role="button">全覽</a>
+                            <a href="crm227.html" class="btn btn-primary" role="button">新增訪談</a>
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <a href="crm21.html" class="btn btn-app btn-primary btn-lg" >
+                            <i class="glyphicon glyphicon-list"></i><span>基本資料</span></a>
+                        <a href="#" class="btn btn-app btn-primary btn-lg">
+                            <i class="fa  fa-dashboard"></i>客戶資訊</a>
+                        <a href="crm02.html" class="btn btn-app btn-primary btn-lg">
+                            <i class="glyphicon glyphicon-piggy-bank"></i>財富資料</a>
+                        <a href="#" class="btn btn-app btn-primary btn-lg" >
+                            <i class="fa  fa-sitemap"></i>資產結構</a>
+                        <a href="crm221.html" class="btn btn-app btn-primary btn-lg" >
+                            <i class="fa fa-shopping-cart"></i>交易紀錄</a>
+                        <a href="crm226.html" class="btn btn-app btn-primary btn-lg"  >
+                            <i class="	fa fa-line-chart"></i>已贖回損益</a>
+                        <a href="crm227.html" class="btn btn-app btn-primary btn-lg" >
+                            <i class="fa fa-briefcase"></i>訪談紀錄</a>
+                        <a href="crm28.html" class="btn btn-app btn-primary btn-lg active" style="color: #f7ba9b;">
+                            <i class="fa fa-lock"></i>KYC相關</a>
+                    </div>
+                </div>
+            </div>
+            <!-- / .page-header -->
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="panel panel-dark-gray">
+                            <div class="panel-heading">
+                                <span class="panel-title" style="font-size: 16px;">客戶基本資料</span>
+                                <div class="panel-heading-controls">
+                                    <button class="btn btn-primary "><span class="fa fa-refresh"></span>&nbsp;&nbsp;取得KYC答案</button>
+                                </div>
+                            </div>
+                            <!-- / .panel-heading-controls -->                            <div class="panel-body">
+                                <form class="form-horizontal">
+                                    <fieldset>
+                                        <legend>客戶投資經驗</legend>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">您的年齡為何？</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">未達40歲</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">40歲以上～未達55歲</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">55歲以上～未達70歲</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">70歲以上</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">您的教育程度為何？(應與個人基本資料勾選結果相同)</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">博士</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px"  checked="">
+                                                    <span class="lbl">碩士</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">大學</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">專科</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">高中職</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">國中以下</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">您的職業為何？</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">金融相關行業(銀行、保險、證券等) </span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px"  checked="">
+                                                    <span class="lbl">非金融相關行業</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">交易權數/面額</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">您個人/家庭年收入為(新臺幣)？</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">未達50萬</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">50萬以上～未達70萬</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">70萬以上～未達100萬</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">100萬以上</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">您個人所得與資金來源？</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px"  checked="">
+                                                    <span class="lbl">薪資、租金、資本利得等</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">儲蓄所得</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">退休金</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">您目前擁有之有價證券與存款合計數為(新臺幣)？</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">未達50萬</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">50萬以上～未達100萬</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">100萬以上～未達200萬</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">200萬以上</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">您您投資的主要目的與需求為？</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">投資理財</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">退休計劃</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">教育基金</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">清償債務</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">您計劃從何時開始提領您投資的部份金額？(現金流量期望)</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">未達1年</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">1年以上～未達2年</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">2年以上～未達5年</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">5年以上</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">您期望投資的年平均報酬率為？</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">-15%～30%</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">-8%～15%</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">0%～3%</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">您投資金融商品預計投資期限多長？</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">未達1年</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">1年以上～未達2年</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">2年以上</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">對於您過去的投資經驗？(本題可複選，取得分最高者計算)</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">曾經投資期貨、連動債、投資型保單、衍生性金融商品</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">曾經投資國內外共同基金、債券、股票</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">對於投資有心得,偏好自行決定投資策略</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">沒經驗</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">請問您從事投資理財之時間？(投資時間)</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">未達1年</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">1年以上～未達2年</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl"> 2年以上～未達5年</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">5年以上</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">您對金融商品的認識？(本題可複選，取得分最高者計算)</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">對金融商品(如連動債等衍生性商品)了解</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">對金融商品(如股票)了解</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">對金融商品(如國內外共同基金)了解</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">對金融商品不了解</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">下列何種敘述最接近您的投資行為：</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">無法忍受投資虧損</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl"> 我偏好資本損失率低，可以獲取穩定收益</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">我願意承擔少量風險，以追求潛力稍高的報酬 </span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">我喜歡高風險高報酬，不在乎短期的波動</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-md-4 control-label" for="mail-subject">您認為下列何者風險最高？</label>
+                                            <div class="col-md-8">
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px" checked="">
+                                                    <span class="lbl">期貨或衍生性金融產品</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">國內外基金、股票或投資型保單</span>
+                                                </label>
+                                                <label class="checkbox-inline">
+                                                    <input type="checkbox" class="px">
+                                                    <span class="lbl">存款、定存</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- / .panel -->
+                    </div>
+                </div>
+            </section>
+        <!-- / #content-wrapper -->
+        <div id="main-menu-bg"></div>
+        </div>
+    </div>
+    <!-- / #main-wrapper -->
+    <!-- Get jQuery from Google CDN -->
+    <!--[if !IE]> -->
+    <script type="text/javascript"> window.jQuery || document.write('<script src="plugins/jQuery/jQuery-2.0.3.min.js">' + "<" + "/script>"); </script>
+    <!-- <![endif]-->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- jQuery UI 1.11.4 -->
+    <script src="plugins/jQueryUI/jquery-ui.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="plugins/fastclick/fastclick.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/app.min.js"></script>
+    <!-- AdminLTE for demo purposes 
+    <script src="dist/js/demo.js"></script>-->
+    <!-- fullCalendar 2.2.5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <script src="plugins/fullcalendar/fullcalendar.min.js"></script>
+    <!-- Pixel Admin's javascripts -->
+    <script src="assets/javascripts/pixel-admin.min.js"></script>
+    <script type="text/javascript">
+        init.push(function () {
+            // Javascript code here
+        })
+        window.PixelAdmin.start(init);
+    </script>
+    <!-- jquery countdown -->
+    <script src="plugins/jQuery/jquery.countdown-2.1.0/jquery.countdown.min.js"></script>
+    <script type="text/javascript">
+        function gettimeFromNow() {
+            return new Date(new Date().valueOf() + 30 * 60 * 1000);
+        }
+        var $clock = $('#clock');
+        $clock.countdown(gettimeFromNow(), function (event) {
+            $(this).html(event.strftime('%M:%S'));
+        });
+        $('#btn-reset').click(function () {
+            $clock.countdown(gettimeFromNow());
+        });
+    </script>
+        <!-- date-range-picker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+    <script src="plugins/daterangepicker/daterangepicker.js"></script>
+    <script>
+        $(function () {
+            //Date range picker
+            $('input[name="daterange"]').daterangepicker(
+                {
+                    singleDatePicker: false,
+                    showDropdowns: true,
+                    showWeekNumbers: false,
+                    timePicker: false,
+                    timePicker24Hour: false,
+                    timePickerSeconds: false,
+                    autoApply: true,
+                    opens: 'center',
+                    buttonClasses: ['btn btn-default'],
+                    applyClass: 'btn-small btn-primary',
+                    cancelClass: 'btn-small',
+                    firstDay: 1,
+                    separator: " - ",
+                    // 預設查最近7天
+                    startDate: moment().subtract('days', 6),
+                    endDate: moment(),
+                    // 最大日放在後7天，查預約交易
+                    maxDate:moment().add('days', 7),
+                    // 最多查5年內的資料
+                    minDate: moment().subtract('years', 5),
+                    // 資料範圍30天
+                    dateLimit: {
+                        "days": 30
+                    },
+                    ranges: {
+                        '今天': [moment(), moment()],
+                        '昨天': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                        '最近7天': [moment().subtract('days', 6), moment()],
+                        '最近30天': [moment().subtract('days', 29), moment()],
+                        '本月': [moment().startOf('month'), moment().endOf('month')],
+                        '上個月': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+                    },
+                    locale: {
+                        format: "YYYY/MM/DD",
+                        applyLabel: '<i class="glyphicon glyphicon-ok"></i>',
+                        cancelLabel: '<i class="glyphicon glyphicon-remove"></i>',
+                        fromLabel: '起',
+                        toLabel: '訖',
+                        customRangeLabel: '自訂範圍',
+                        daysOfWeek: ['日','一','二','三','四','五','六'],
+                        monthNames: ['1 月','2 月','3 月','4 月','5 月','6 月','7 月','8 月','9 月','10 月','11 月','12 月'],
+                    }
+                });
+        });
+    </script>
+    <!-- DataTables -->
+    <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('#table1').DataTable({
+                //"dom": 'l<"addbutton">frtip',
+                dom:
+                    "<'row'<'col-sm-4'l><'col-sm-8'<'newRecord'>>>" +
+                    "<'row'<'col-sm-12'tr>>" +
+                    "<'row'<'col-sm-5'i><'col-sm-7'p>>",
+                destroy: true,
+                paging: true,
+                info: true,
+                searching: false,
+                ordering: true,
+                order: [[ 2, "desc" ]],  // 預設排序
+                orderMulti: false,
+                autoWidth: false,
+                pageLength: 5,
+                lengthMenu: [[5, 10, 25, 50, -1], [5, 10, 25, 50, "全部"]],
+                processing: true,
+                pagingType: 'full_numbers',
+                decimal: ",",                
+                language: {
+                    "processing":   "處理中...",
+                    "loadingRecords": "載入中...",
+                    "lengthMenu":   "一頁顯示 _MENU_ 筆資料",
+                    "zeroRecords":  "沒有符合的結果",
+                    "info":         "顯示第 _START_ 至 _END_ 筆資料，共 _TOTAL_ 筆",
+                    "infoEmpty":    "顯示第 0 至 0 筆資料，共 0 筆",
+                    "infoFiltered": "(從 _MAX_ 筆資料中過濾)",
+                    "infoPostFix":  "",
+                    "search":       "搜尋:",
+                    "url":          "",
+                    "paginate": {
+                            'first': '<i class="fa fa-chevron-left"></i><i class="fa fa-chevron-left"></i>',
+                            'last': '<i class="fa fa-chevron-right"></i><i class="fa fa-chevron-right"></i>',
+                            'previous': '<i class="fa fa-chevron-left"></i>',
+                            'next': '<i class="fa fa-chevron-right"></i>'
+                    },
+                    "Aria": {
+                        "sortAscending":  ": 小 ->大排列",
+                        "sortDescending": ": 大->小 排列"
+                    }
+                },
+                "columnDefs": [
+                  { "orderable": false, "targets": [0,1,8] }
+                ]
+            });
+            $("div.newRecord").html(' <a  class="btn btn-primary pull-right" role="button" data-toggle="modal" data-target="#modal-sizes-2"><i class="glyphicon glyphicon-plus margin-r-5"></i>新增</a>');
+            //$("div.addbutton").html('<i class="glyphicon glyphicon-plus"></i>');
+        });
+    </script>
+    <!-- Bootstrap Datepicker-->
+    <script>
+        init.push(function () {
+            var options = {
+                todayBtn: "linked",
+                orientation: $('body').hasClass('right-to-left') ? "auto right" : 'auto auto'
+            }
+            $('#bs-datepicker-example').datepicker(options);
+
+            $('#bs-datepicker-component').datepicker();
+
+            var options2 = {
+                orientation: $('body').hasClass('right-to-left') ? "auto right" : 'auto auto'
+            }
+            $('#bs-datepicker-range').datepicker(options2);
+
+            $('#bs-datepicker-inline').datepicker();
+        });
+    </script>
+    <!-- / Bootstrap Datepicker -->
+    <!--	jQuery Validation -->
+    <script>
+        init.push(function () {
+            // Setup validation
+            $("#jq-validation-form").validate({
+                ignore: '.ignore, .select2-input',
+                focusInvalid: false,
+                rules: {
+                    'jq-validation-required': {
+                        required: true
+                    },
+                    'jq-validation-select1': {
+                        required: true
+                    },
+                    'jq-validation-select2': {
+                        required: true
+                    },
+                    'jq-validation-text': {
+                        required: true
+                    }
+                },
+                messages: {
+                    'jq-validation-required': '不可為空白',
+                    'jq-validation-select1': '請選擇',
+                    'jq-validation-select2': '請選擇'
+                }
+            });
+        });
+    </script>
+    <!-- / Javascript -->
+</body>
+</html>
